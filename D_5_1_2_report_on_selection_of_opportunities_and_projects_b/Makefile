@@ -1,4 +1,4 @@
-all:	clean bib pdf publish
+all:	clean bib pdf 
 
 pdf: 
 	latex D_5_1_2_report_on_selection_of_opportunities_and_projects_b.tex
@@ -10,7 +10,6 @@ pdf:
 
 publish:
 	s3cmd put --acl-public D_5_1_2_report_on_selection_of_opportunities_and_projects_b.pdf s3://www.jaumebarcelo.info/projects/C4EU/
-	cp D_5_1_2_report_on_selection_of_opportunities_and_projects_b.pdf ~/Dropbox/Commons4EU/Wp5\ BuB\ Pilots/BuB_D_5_1_2_report_on_selection_of_opportunities_and_projects_b/D_5_1_2_report_on_selection_of_opportunities_and_projects_b.pdf
 
 
 bib:	
