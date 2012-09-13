@@ -1,0 +1,23 @@
+all:	clean bib pdf 
+
+pdf: 
+	latex D_2_4_1_dissemination_report_on_telecom_policy_makers_a.tex
+	latex D_2_4_1_dissemination_report_on_telecom_policy_makers_a.tex
+	#dvipdfm D_2_4_1_dissemination_report_on_telecom_policy_makers_a.dvi
+	dvips -o D_2_4_1_dissemination_report_on_telecom_policy_makers_a.ps -Ppdf -G0 -t a4 D_2_4_1_dissemination_report_on_telecom_policy_makers_a.dvi
+	ps2pdf -sPAPERSIZE=a4 -dPDFSETTINGS=/prepress -dEmbedAllFonts=true D_2_4_1_dissemination_report_on_telecom_policy_makers_a.ps
+	evince D_2_4_1_dissemination_report_on_telecom_policy_makers_a.pdf &
+
+publish:
+	s3cmd put --acl-public D_2_4_1_dissemination_report_on_telecom_policy_makers_a.pdf s3://www.jaumebarcelo.info/projects/C4EU/
+
+
+bib:	
+	latex D_2_4_1_dissemination_report_on_telecom_policy_makers_a.tex
+	bibtex D_2_4_1_dissemination_report_on_telecom_policy_makers_a
+	latex D_2_4_1_dissemination_report_on_telecom_policy_makers_a.tex
+					
+clean:
+	rm -f D_2_4_1_dissemination_report_on_telecom_policy_makers_a.aux D_2_4_1_dissemination_report_on_telecom_policy_makers_a.log D_2_4_1_dissemination_report_on_telecom_policy_makers_a.blg D_2_4_1_dissemination_report_on_telecom_policy_makers_a.bbl D_2_4_1_dissemination_report_on_telecom_policy_makers_a.out D_2_4_1_dissemination_report_on_telecom_policy_makers_a.dvi D_2_4_1_dissemination_report_on_telecom_policy_makers_a.ps D_2_4_1_dissemination_report_on_telecom_policy_makers_a.pdf D_2_4_1_dissemination_report_on_telecom_policy_makers_a.lof D_2_4_1_dissemination_report_on_telecom_policy_makers_a.lot D_2_4_1_dissemination_report_on_telecom_policy_makers_a.toc diff* *~
+
+
