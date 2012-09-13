@@ -1,0 +1,5 @@
+In order to effectively transmit in the UHF TV band, it is mandatory to avoid interference with legacy users like wireless microphones, radio astronomy and existing TV channels. Wireless microphones are the ones that cause most of the problems when building a detector, mainly because of the it narrow-band transmissions, low transmit power and (usually) unknown location. 
+
+There are several techniques for determining the presence of signal in the UHF TV band, namely energy detection~\cite{cabric2006experimental}, cyclostationary detection~\cite{kim2007cyclostationary} and feature detection~\cite{cabric2006spectrum}. In this work, an energy detection approach is implemented due to its low complexity.
+
+The proposed approach gathers the Power Spectral Density (PSD)

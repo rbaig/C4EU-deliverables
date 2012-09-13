@@ -1,0 +1,3 @@
+The proposed spectrum sensor gathers power metrics at determined center frequency $f_{0}$ during a fixed \emph{dwelling time} $d_{w}=0.001$~s, moving from $f_{min}$ towards $f_{max}$ at $SS$ frequency intervals. We denote the signal power at interval $i$ as $P_i$ and $T=(f_{max}-f_{min}) / SS$ samples are taken in total. Since $SS$ is typically smaller than the width of a TV channel, several samples are taken for each TV channel.
+
+The procedure described above is conventionally performed using a spectrum analyzer. The resolution bandwidth in the spectrum analyzer is equivalent to our $SS$. In our prototype, there is not a concept equivalent to the spectrum analyzer's video bandwidth, as we do not apply any further filtering on the $P_{i}$ values.
