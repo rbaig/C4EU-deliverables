@@ -426,7 +426,15 @@
   author = {{Sanabria-Russo, L.}},
   howpublished = "\url{git://github.com/SanabriaRusso/USRP-GNURadio.git}",
   year = {2012},
-  note = "[Online; accesed July-2012]",
+  note = "[Online; accessed July-2012]",
+  }
+  
+  @misc{sanabriaUSRPTX,
+  title = {{TCP/IP communication between two USRP-E110}},
+  author = {{Sanabria-Russo, L.}},
+  how published = "\url{http://arxiv.org/abs/1209.2635}",
+  year = {2012},
+  note = "[Online; accessed July-2012]",
   }
 
 @article{sobrinho1999qsa,
