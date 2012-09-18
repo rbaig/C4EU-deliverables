@@ -1,0 +1,23 @@
+all:	clean bib pdf 
+
+pdf: 
+	latex D_5_6_1_evaluation_of_results_and_best_practices.tex
+	latex D_5_6_1_evaluation_of_results_and_best_practices.tex
+	#dvipdfm D_5_6_1_evaluation_of_results_and_best_practices.dvi
+	dvips -o D_5_6_1_evaluation_of_results_and_best_practices.ps -Ppdf -G0 -t a4 D_5_6_1_evaluation_of_results_and_best_practices.dvi
+	ps2pdf -sPAPERSIZE=a4 -dPDFSETTINGS=/prepress -dEmbedAllFonts=true D_5_6_1_evaluation_of_results_and_best_practices.ps
+	evince D_5_6_1_evaluation_of_results_and_best_practices.pdf &
+
+publish:
+	s3cmd put --acl-public D_5_6_1_evaluation_of_results_and_best_practices.pdf s3://www.jaumebarcelo.info/projects/C4EU/
+
+
+bib:	
+	latex D_5_6_1_evaluation_of_results_and_best_practices.tex
+	bibtex D_5_6_1_evaluation_of_results_and_best_practices
+	latex D_5_6_1_evaluation_of_results_and_best_practices.tex
+					
+clean:
+	rm -f D_5_6_1_evaluation_of_results_and_best_practices.aux D_5_6_1_evaluation_of_results_and_best_practices.log D_5_6_1_evaluation_of_results_and_best_practices.blg D_5_6_1_evaluation_of_results_and_best_practices.bbl D_5_6_1_evaluation_of_results_and_best_practices.out D_5_6_1_evaluation_of_results_and_best_practices.dvi D_5_6_1_evaluation_of_results_and_best_practices.ps D_5_6_1_evaluation_of_results_and_best_practices.pdf D_5_6_1_evaluation_of_results_and_best_practices.lof D_5_6_1_evaluation_of_results_and_best_practices.lot D_5_6_1_evaluation_of_results_and_best_practices.toc diff* *log *~
+
+
