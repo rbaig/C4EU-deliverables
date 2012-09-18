@@ -398,7 +398,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Principles and results \\ (C4EU 5.6.1: Evaluation of Results and Best Practices -a )}
+\title{Building a BuB Community \\ (C4EU 5.5.1: Report on support actions - training and networking)}
 %
 %
 % author names and IEEE memberships
@@ -484,7 +484,7 @@ This is the abstract
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
- Bottom-up-Broadband (BuB), principles, results
+ Bottom-up-Broadband (BuB), wifi, super-wifi, fiber, sensor networks
 %Slotted Aloha, game theory, contention control, media access control.
 \end{IEEEkeywords}
 
@@ -536,17 +536,15 @@ Blah blah blah blah.
 Blah blah blah blah.
 Blah blah blah blah.
 
-\section{A parallelism with open source communities}
+\section{Mentor program}
 
-\section{BuB Principles}
+\section{Internal Workshop}
 
-\subsection{Open Network}
+\section{Mailing list}
 
-\subsection{Transparency}
+\section{Web}
 
-\subsection{Collaboration}
-
-\section{Project indicators}
+\section{External international forums}
 
 \section{Conclusion}
 \label{sec:conclusion}
