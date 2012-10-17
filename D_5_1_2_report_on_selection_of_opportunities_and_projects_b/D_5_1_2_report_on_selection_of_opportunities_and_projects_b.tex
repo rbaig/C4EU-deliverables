@@ -142,7 +142,7 @@
   % driver is specified.
    \usepackage[dvips]{graphicx}
   % declare the path(s) where your graphic files are
-  % \graphicspath{{../eps/}}
+   \graphicspath{{./figures/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
   % \DeclareGraphicsExtensions{.eps}
@@ -536,10 +536,34 @@ Blah blah blah blah.
 Blah blah blah blah.
 Blah blah blah blah.
 
-\section{Related Work}
-\label{sec:related_work}
-
 \section{Selection Criteria and Pilot Selection}
+
+Out of the twelve pilot proposals that were collected in the first call for pilots \cite{barcelo2012bub}, we selected a few of them to be considered within the C4EU project.
+The pilots we are focusing on are the Open Sensor Network pilot (OSN), the Free Europe WiFi pilot (FEW), the Fiber From The X pilot (FFTx), the Northern Quarter Network pilot (NQN) and the Mobile Mesh Node pilot (MMN).
+
+A first selection criteria was the existence of a community that backed the pilot.
+For the Open Sensor Network pilot, it exists a closely related initiative called Smart Citizen (\url{www.smartcitizen.me}) that has rised around 18,000 Euro in crowdfunding, and therefore we believe there is interest from the part of the citizenship for these kind of technologies.
+
+The ProvinciaWiFi solution in Italy has a huge user base that gives credit to the model.
+For this reason we believe that the extension of the model to other cities and countries may enjoy the same success.
+
+The FFTx pilot provides bottom-up-broadband to only a dozen of families right now.
+However, as this bandwidth is distributed using the wireless community network, it benefits a considerably larger number of users.
+The fiber connections are so fast (1 Gbps) that the owners are happy to share it with others.
+
+Another criteria for selection has been the diversity of technologies.
+There is one pilot for sensor nodes (OSN), two involving WiFi (NQN, FEW), two involving fibre (FFTx, NQN), and one involving a mobile mesh node (MMN).
+There are already some of the pilots that mix different technologies and the vision is that in the future, as they evolve, the different pilots and technologies can be seamless combined as in Fig. \ref{fig:hybrid}.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\linewidth]{hybrid}
+\caption{A hybrid BuB deployment combining different technologies.}
+\label{fig:hybrid}
+\end{figure}
+
+We have also chosen pilots that can cover multiple cities in Europe.
+With the exception of the pilots involving fiber (NQN, FFTx) which by its very nature are localized, the others can be tested and demonstrated in any of the participating cities.
 
 \section{The Open Sensor Network Pilot}
 
@@ -568,12 +592,13 @@ The NQ is home to a wide range of SMEs from many sectors and is a good place for
 
 One of the most important aspects of the project, apart from designing and deploying the network, is defining a good pricing model for commercial use. It is a basic point, because it is crucial that the network becomes self-funding and sustainable after the conclusion of the C4EU project. It is, somehow, a critical aspect, and the success of the pilot will strongly depend on the success of the pricing definition. 
 
-\section{The Rubi Pilot}
+\section{FTTx}
 The Rubi pilot consists of the design, implementation, testing and documentation of optical fiber in Rubi, but by some troubles, it has occurred delays in the implementation of fiber in Rubi, therefore without leaving aside this pilot we will realize a project called FFTx. This project will consist to implement the optical fiber over Bottom-Up Broadband (BuB) model. The FFTx name is because the study includes the main fiber deployments -FFTH/FFTF/FFTP Fiber From The Home/Farm/Premises.
 
 
 To begin the project, we will do a study the BuB model, an investigation of existing fiber types and the advantages that they have over others transmission media. We will do too a comprehensive study on how the optical fiber in Gurb was implemented -Gurb is a municipality where has been successfully implemented the optical fiber over BuB model. Finally we will look for the possibility to carry out the implementation of optical fiber over this model in different municipalities (eg Rubi).
 
+\section{The Mobile Mesh Node Pilot}
 
 \section{Conclusion}
 \label{sec:conclusion}
