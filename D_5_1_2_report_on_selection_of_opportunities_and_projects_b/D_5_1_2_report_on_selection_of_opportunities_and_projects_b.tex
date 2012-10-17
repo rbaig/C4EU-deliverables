@@ -552,8 +552,32 @@ However, as this bandwidth is distributed using the wireless community network, 
 The fiber connections are so fast (1 Gbps) that the owners are happy to share it with others.
 
 Another criteria for selection has been the diversity of technologies.
-There is one pilot for sensor nodes (OSN), two involving WiFi (NQN, FEW), two involving fibre (FFTx, NQN), and one involving a mobile mesh node (MMN).
+Tab. \ref{tab:technologies} taken from \cite{barcelo2012bub} summarizes the advantages and shortcoming of the different technologies.
+At this stage of the project, SuperWifi is not yet mature enough to serve the goals of the BuB initiatives, as it is still in a research stage.
+
+Regarding the distribution of the pilots with respect to technologies, there is one pilot for sensor nodes (OSN), two involving WiFi (NQN, FEW), two involving fibre (FFTx, NQN), and one involving a mobile mesh node (MMN).
 There are already some of the pilots that mix different technologies and the vision is that in the future, as they evolve, the different pilots and technologies can be seamless combined as in Fig. \ref{fig:hybrid}.
+
+\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+%\extrarowheight as needed to properly center the text within the cells
+\caption{Technologies under consideration}
+\label{tab:technologies}
+\centering
+\begin{tabular}{|c|p{5cm}|}
+\hline
+Technology & Characteristics \\
+\hline
+Fibre Optics & Mature technology, wired, very high throughput, relatively expensive, does not create nor suffer interference, reliable. \\
+WiFi & Mature technology, wireless, high throughput, more economic than fibre, limited by interference and spectrum saturation. \\
+Sensors & New technology, wireless, low throughput (for battery-powered devices), open data. \\
+Super-WiFi & Future technology, wireless, medium throughput, longer propagation distance and better penetration compared to WiFi, co-existence with incumbent networks.\\
+\hline
+\end{tabular}
+\end{table}
+
 
 \begin{figure}[!t]
 \centering
