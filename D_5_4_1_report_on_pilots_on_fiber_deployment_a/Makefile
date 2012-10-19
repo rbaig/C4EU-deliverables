@@ -1,0 +1,23 @@
+all:	clean bib pdf 
+
+pdf: 
+	latex D_5_4_1_report_on_pilots_on_fiber_deployment_a.tex
+	latex D_5_4_1_report_on_pilots_on_fiber_deployment_a.tex
+	#dvipdfm D_5_4_1_report_on_pilots_on_fiber_deployment_a.dvi
+	dvips -o D_5_4_1_report_on_pilots_on_fiber_deployment_a.ps -Ppdf -G0 -t a4 D_5_4_1_report_on_pilots_on_fiber_deployment_a.dvi
+	ps2pdf -sPAPERSIZE=a4 -dPDFSETTINGS=/prepress -dEmbedAllFonts=true D_5_4_1_report_on_pilots_on_fiber_deployment_a.ps
+	evince D_5_4_1_report_on_pilots_on_fiber_deployment_a.pdf &
+
+publish:
+	s3cmd put --acl-public D_5_4_1_report_on_pilots_on_fiber_deployment_a.pdf s3://www.jaumebarcelo.info/projects/C4EU/
+
+
+bib:	
+	latex D_5_4_1_report_on_pilots_on_fiber_deployment_a.tex
+	bibtex D_5_4_1_report_on_pilots_on_fiber_deployment_a
+	latex D_5_4_1_report_on_pilots_on_fiber_deployment_a.tex
+					
+clean:
+	rm -f D_5_4_1_report_on_pilots_on_fiber_deployment_a.aux D_5_4_1_report_on_pilots_on_fiber_deployment_a.log D_5_4_1_report_on_pilots_on_fiber_deployment_a.blg D_5_4_1_report_on_pilots_on_fiber_deployment_a.bbl D_5_4_1_report_on_pilots_on_fiber_deployment_a.out D_5_4_1_report_on_pilots_on_fiber_deployment_a.dvi D_5_4_1_report_on_pilots_on_fiber_deployment_a.ps D_5_4_1_report_on_pilots_on_fiber_deployment_a.pdf D_5_4_1_report_on_pilots_on_fiber_deployment_a.lof D_5_4_1_report_on_pilots_on_fiber_deployment_a.lot D_5_4_1_report_on_pilots_on_fiber_deployment_a.toc diff* *~
+
+
