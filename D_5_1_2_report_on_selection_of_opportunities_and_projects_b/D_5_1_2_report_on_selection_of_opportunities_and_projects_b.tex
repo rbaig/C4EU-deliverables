@@ -593,7 +593,13 @@ With the exception of the pilots involving fiber (NQN, FFTx) which by its very n
 
 This pilot is focused on deploying a sensor network which would gather real time data from the environment, such as air quality, noise pollution, etc. This information would be then uploaded to an open data portal to make it publicly available. The ultimate objective of this project is to let developers use this data to build applications that can improve the daily lives of the citizens.
 
-At the time of writing some key decisions have been made. ZigBee is an open source protocol which focuses on low energy consumption and it will be used to establish the connection between the sensor nodes. Also,  these nodes will be working on top of the open source prototyping platform Arduino which is commonly used to deploy wireless sensor networks nowadays.
+Since this project follows a \emph{BuB} approach each user shall have its own node (or several), which, at the same time would add resources to this network. In case not all nodes aren't connected to the Internet there must be a protocol to interconnect these nodes.
+
+As a power supply there shall be at least two options because each node should have some degree of independency. After all, there is not a predefined environment for these sensors to work on.
+
+For this purpose common wireless protocols such as Wi-Fi, Bluetooth and ZigBee have been compared since this decision will have direct impact on the projectfuture. Although Wi-Fi and Bluetooth have good data rates they are not designed to have a low power consumption which is a key aspect. Also, ZigBee has a low complexity and the best range ---around 550m---, apart from admitting several topologies. Its data rate would be its only drawback, but sensors don't transmit data this often hence Zigbee has been chosen to become the working protocol.
+
+Several sensor board options were available. The university already had Crossbow Telos B nodes which run the TinyOS operating system. This option has many advantages such as built-in multithreading and low-level option tuning. Also, it is open source. Another good choice is Arduino, an open source prototyping system which is commonly used nowadays and has a very large community. Since it is designed with simplicity in mind it lacks the complete set of features that TinyOS can provide, and consequently it is more lightweight, which sinergizes with the project purpose of deploying a battery-powered wireless sensor network.
 
 \section{The Free Europe Wifi Pilot}
 
