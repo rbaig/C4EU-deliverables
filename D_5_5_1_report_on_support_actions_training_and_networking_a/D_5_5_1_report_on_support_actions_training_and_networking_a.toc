@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {I}Introduction}{6}
+\contentsline {section}{\numberline {II}Mentor program and academic advice}{6}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Mentors for the OSN pilot}{8}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Mentor for the FFTx pilot}{8}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Mentor for the FEW pilot}{8}
+\contentsline {section}{\numberline {III}Internal Workshop}{8}
+\contentsline {section}{\numberline {IV}Open mailing list}{9}
+\contentsline {section}{\numberline {V}Web}{10}
+\contentsline {section}{\numberline {VI}International Forums}{10}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Battlemesh}{10}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}International Summit of Wireless Community Networks}{10}
+\contentsline {section}{\numberline {VII}Conclusion}{11}
