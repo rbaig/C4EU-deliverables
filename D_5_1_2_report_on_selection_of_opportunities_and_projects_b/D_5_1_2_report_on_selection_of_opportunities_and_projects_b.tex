@@ -611,6 +611,89 @@ Notice the complexity, not only technical of the project, but also on every Euro
 
 Because of this wide range of different possibilities, it is difficult to create a totally generic prototype, so in order to design it there are many factors to consider.
 
+Talking about the technical aspects of the system, it base its functionality on OpenWISP. OpenWISP (Open Wireless Internet Service Provider) is a software platform that can be used to provide a full, complete WiFi service. It is actually divided into five different modules that will be explained below:
+
+\begin{enumerate}
+\item[\fbox{1}] \textbf{OpenWISP User Management System:} 
+
+It is a Ruby on Rails application, that interacts directly with the users. By using this module, the user can get access to the OpenWISP global system to get internet access, password recovery if needed and manage his account.
+
+This module is directly related with third party modules as the FreeRadius server with a MySQL database to sign-up/sign-out and save user information. Once the user is registered in the service, and every time he tries to connect to the network, he will be asked to introduce his username and password to start surfing Internet.
+
+This application has been designed to be integrated with RADIUS authentication solutions.
+
+At this moment, OpenWISP User Management System is being developed to be integrated into FreeRADIUS v2.1, so other implementations are not currently supported.
+
+Some of its features are:
+\begin{itemize}
+\item User registration via mobile phone, ID card or credit card (Paypal IPN).
+\item User interface supporting most common browsers including mobile web browsers.
+\item Password recovery via mobile phone or email.
+\item Statistics of generated traffic per user.
+\item User administration via dedicated admin interface.
+\item Admin interface supports role based administration (operator, admin, superadmin).
+\item Via admin interface, new users can be added, modified, enabled/disabled or monitoring traffic per user/nationality and logins/registration.
+\item English and Italian language translations at the moment.
+\end{itemize}\\
+
+\item[\fbox{2}] \textbf{OpenWISP Geographic Monitoring:}
+
+It is a Ruby on Rails - HTML 5.0 based, web GUI that allows the management staff to get information about the geographic information of the deployed access points. It renders a geographic map of the status your networks: access point up/down/unknown (if an access point has an "unknown" status, then it would not be able to download the configuration to connect to the system from the OpenWISP Access Point Manager. \\
+
+\item[\fbox{3}]\textbf{OpenWISP Captive Portal Manager:}
+
+It is a captive portal written from Scratch with Ruby on Rails. It allows the user surfing the Internet by enabling rules in the server firewall. This module is the operation center of all the system, so all the data that is generated or has as destination the system, will pass through this module. 
+
+Its main features are:
+\begin{itemize}
+\item Multiple captive portals (one per physical or virtual interface).
+\item RADIUS / Local authentication.
+\item Experimental traffic shaping per user.
+\item Multiple OS support.
+\item IPv6 support can be easily implemented.
+\end{itemize}
+
+
+\item[\fbox{4}]\textbf{OpenWISP Access Point Manager:}
+
+It is a Ruby on Rails based web GUI. This module allows the management staff to configure, monitorization and support of deployed access points.\\ It also stores value information about the network, as the amount of traffic each VPN generate, MAC addresses, geographical addresses and network setting, among other data. The access points download the configuration and settings from this module to establish a connection to the gateway.  
+
+
+\item[\fbox{5}]\textbf{OpenWISP Firmware:}
+
+It is a set of scripts (shell and web cgi) that sits on top of OpenWrt\footnote{OpenWrt is a linux distro for embedded devices that provides a fully writable file structure system with package management. This allows to customize devices keeping freedom from vendor configuration.}. OWF is a no visible module of the system. It is the firmware that every access point has installed to be able to connect to the network. Every time a new access point is connected to the network, it will download the settings from the Access Point Manager, as before explained. If an access point is rebooted without network connectivity, will get no configuration until it could establishes a connection with the OpenWISP Manager, so then, the configuration will be sent to it. 
+
+OpenWISP firmware provides a daemon for retrieving the configuration of some components at the manager:
+
+\begin{itemize}
+\item WiFi (currently only for madwifi-ng and ath9k drivers).
+\item Networking.
+\item Data layer traffic shaping.
+\item OpenVPN (data layer, TAP).
+\item Unix cron jobs
+\end{itemize}
+
+Far from only providing a daemon, it also has a web GUI where:
+\begin{itemize}
+\item Configuring basic net structure
+\item Network parameters.
+\item Configuring basic OpenWISP server settings.
+\item Performing test and technical fails menu.
+\end{itemize}\\
+
+\end{enumerate}\\
+
+Also there exists another application based on Ruby/Sinatra that communicates or interacts with the other modules using RESTful services. It is called \textbf{OpenWISP Middleware}.\\This module has different tasks to do depending on the other module that is talking with.
+
+\begin{itemize}
+
+\item By communicating with the OpenWISP Captive Portal Manager, it personalizes the captive page for a group of different access points.\item On the other hand, by interacting with the OpenWISP User Management System, OpenWISP Geographic Monitoring and OpenWISP Access Point Manager, it provides very useful information in a full duplex way.
+
+\end{itemize}
+
+By the moment, we are designing the technical aspects of the spanish implementation of the project, so as soon as we get the design, we will start programming the code to make a first deployment.
+
+
 
 \section{The Northern Quarter Network Pilot}
 This project consists, roughly speaking, on the design, implementation and testing of an optical fiber network in the Northern Quarter (NQ) area of Manchester. This network will provide public free Wi-Fi in that area of the city. The project will be led by the Manchester Digital Development Agency (MDDA), and all the designs and implementations will follow a model they have already developed.
