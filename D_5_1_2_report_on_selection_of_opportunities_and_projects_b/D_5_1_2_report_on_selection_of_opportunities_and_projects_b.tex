@@ -372,6 +372,7 @@
 % *** PDF, URL AND HYPERLINK PACKAGES ***
 %
 \usepackage{url}
+\usepackage{pdfpages}
 % url.sty was written by Donald Arseneau. It provides better support for
 % handling and breaking URLs. url.sty is already installed on most LaTeX
 % systems. The latest version can be obtained at:
@@ -609,6 +610,8 @@ In summary, the final idea is: being a European citizen, it is possible to conne
 
 Notice the complexity, not only technical of the project, but also on every European country telecommunication laws. Every region has its own laws in reference of telecommunication organizations, and in the way citizen use the service. From keeping data from the connected users, to meet the rules of the market it's just an example.
 
+This pilot is being carried out by Nacho Justel.
+
 Because of this wide range of different possibilities, it is difficult to create a totally generic prototype, so in order to design it there are many factors to consider.
 
 Talking about the technical aspects of the system, it base its functionality on OpenWISP. OpenWISP (Open Wireless Internet Service Provider) is a software platform that can be used to provide a full, complete WiFi service. It is actually divided into five different modules that will be explained below:
@@ -828,8 +831,10 @@ The views expressed in this technical report are solely those of the authors and
 % is flush with the other column.
 %\enlargethispage{-5in}
 
+\section{Appendix}
 
-
+\subsection{Appendix 1: Free Europe WiFi Project Charter}
+\includepdf[pages={1,2,4}]{projectcharter/projectcharterFEW.pdf}
 % that's all folks
 \end{document}
 
