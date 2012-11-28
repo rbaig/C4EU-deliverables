@@ -411,10 +411,13 @@
 %
 
 \author{
-	Name~Name, %\IEEEmembership{Member,~IEEE,}
-    and~Name~Name% \IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
+	Jorge~Beltran, %\IEEEmembership{Member,~IEEE,}
+	Alejandro~Andreu, %\IEEEmembership{Member,~IEEE,}
+	Ignacio~Justel, %\IEEEmembership{Member,~IEEE,}
+	Fernando~Gros, %\IEEEmembership{Member,~IEEE,}
+    and~Jaume~Barcelo% \IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
 \thanks{
-Affiliation
+The authors are with Universitat Pompeu Fabra
 }
 }
 
@@ -473,7 +476,11 @@ Affiliation
 
 \begin{abstract}
 %\boldmath
-This is the abstract
+This report summarizes the training, networking and communication efforts of the BuB4EU branch of the Commons for Europe project.
+Four students have joined the project so far and they are provided training and guidance to complete the BuB pilots the are working on.
+Each of the students has both one academic advisor and one mentor with extensive BuB experience.
+These two roles complement each other in the education of the student.
+The collaboration tools include are those commonly present in collaborative initiatives: workshops, mailing list, git repository and talks at international forums.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -484,7 +491,7 @@ This is the abstract
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
- Bottom-up-Broadband (BuB), wifi, super-wifi, fiber, sensor networks
+ Bottom-up-Broadband (BuB), training, workshops, presentations
 %Slotted Aloha, game theory, contention control, media access control.
 \end{IEEEkeywords}
 
@@ -531,12 +538,42 @@ This is the abstract
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{T}{his} is the introduction blah blah blah blah blah blah blah.
-Blah blah blah blah.
-Blah blah blah blah.
-Blah blah blah blah.
+\IEEEPARstart{T}{his} report summarizes the training and communication efforts of the BuB4EU branch of the Commons for Europe project.
+After this introduction, Section \ref{sec:about} provides information about this document and how to collaborate.
+Section \ref{sec:mentor} describes the roles of mentor and adacemic advisor that will help the students participating in the pilots.
+Those that are interested in BuB4EU meet in the workshops detailed in Section \ref{sec:workshops} and participate in the mailing list as explained in Section \ref{sec:mailing}.
+Additionally, we are preparing a web as mentioned in Section \ref{sec:web}.
+The BuB4EU branch and the obtained results have also been presented in external international forums that are introduced in Section \ref{sec:forums}.
+Finally, Section \ref{sec:conclusion} offers some concluding remarks.
+
+\section{About this document}
+\label{sec:about}
+
+This report has been produced using open source tools such as {\LaTeX} \cite{lamport1994ldp} and \emph{git} \cite{chacon2009pg}.
+{\LaTeX} is widely used in academia to prepare print-class documents.
+It automatically takes care of numbering, cross-referencing, tables of contents, bibliography, etc.
+\emph{git} is a high performance distributed revision control which is used in many open source projects, such as the linux kernel.
+Git makes it easy and safe to collaborate as each contributor works on his personal copy.
+Good contributions can be easily shared with others, and it is always possible to revert to a previous version.
+
+Our git repository is publicly available in \emph{github}:
+
+https://github.com/jbarcelo/C4EU-deliverables
+
+Anyone who is familiar with {\LaTeX} and \emph{github} can contribute to this document.
+The firs step is to make a copy (a \emph{fork} in \emph{github} jargon).
+The contributor can work in this copy and make changes to improve the document.
+After that, it is necessary to request that these changes are merged into the original copy of the document (a \emph{pull request} in github jargon).
+
+If you see anything that can be improved, feel free to contribute.
+This document is alive in the sense that it will keep evolving as long as contributors make changes and improve it.
+
+The system automatically keeps track of all the contributors and their contributions.
+It is possible to see who is contributing more actively and which are the exact changes made by each contributor.
+And everything is public on the web.
 
 \section{Mentor program and academic advice}
+\label{sec:mentor}
 The students selected to participate in the Commons for Europe (C4EU) project do so as part of their education at the university.
 Specifically, this training is divided in two different blocks: \emph{practicum} and \emph{degree thesis}.
 The practicum involves real-world work in which the students have the opportunity to use the skills they have learned in regular courses.
@@ -556,13 +593,29 @@ As the practicum is tied to a real-world work, the \emph{mentor} needs to be som
 Besides the actual technical skills acquired in the execution of the \emph{practicum}, the students are also expected to practice \emph{soft} skills such as participation in meetings, effective communication, organization of work to meet schedules, generation of documentation, etc.
 For some people, the practicum can be the starting point of a professional career.
 
-In the next months, we will assign a mentor to each of the student participating in the C4EU project.
+A mentor has been assigned to each of the student participating in the C4EU project.
 It is important that the mentor is someone from outside the university that is very familiar with bottom-up-broadband and with the pilot.
-We have already taken the decision for two students:
-\begin{itemize}
-\item Nacho Justel will be mentored by Giovanni Calcerano in the FreeEuropeWiFi pilot.
-\item Jorge Beltran will be mentored by Roger Baig in the fiber-from-the-home (FFTH) pilot.
-\end{itemize}
+Table \ref{tab:mentors} summarizes the pilots under consideration, the student assigned to each pilot and the mentor assigned to each student.
+
+\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+%\extrarowheight as needed to properly center the text within the cells
+\caption{Pilots, students and mentors}
+\label{tab:mentors}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Pilot & Student & Mentor \\
+\hline
+Open Sensor Network & Alejandro Andreu & Alex Posada and Tomas Diez\\
+Free Europe WiFi & Ignacio Justel & Givanni Calcerano\\
+FFTx & Jorge Beltran & Roger Baig\\
+Mobile Node & Fernando Gros & Efrain Foglia\\
+\hline
+\end{tabular}
+\end{table}
 
 In addition to the \emph{practicum}, the students also have write their \emph{degree thesis}.
 This thesis is an academic document that is necessary to obtain the degree.
@@ -592,16 +645,59 @@ Github is a web based extension of the git revision control system, and makes it
 Recently two researches joined the initiative and they will be helping Alejandro completing the project. A short biography is shown below.
 
 \begin{description}
-    \item[Alex Posada] He is an engineer who researches in the field of interactive media, produces and creates music and is actively involved in many interactive projects which normally involve sensors. Hence he will be able to contribute to the Open Sensor Network project.
-    \item[TomÃ¡s DÃ­ez] He is the project manager in FabLab Barcelona ---workshop offering personal digital fabrication---, located in the Institute for Advanced Architecture of Catalonia (IAAC). He has executed projects in Latin America as well as in Europe. He focuses on the research for a more fluid language between machines and humans, and is currently working on Smart Citizen, a very similar initiative to Open Sensor Network.
+    \item Alex Posada: He is an engineer who researches in the field of interactive media, produces and creates music and is actively involved in many interactive projects which normally involve sensors. Hence he will be able to contribute to the Open Sensor Network project.
+    \item Tomas Diez: He is the project manager in FabLab Barcelona ---workshop offering personal digital fabrication---, located in the Institute for Advanced Architecture of Catalonia (IAAC). He has executed projects in Latin America as well as in Europe. He focuses on the research for a more fluid language between machines and humans, and is currently working on Smart Citizen, a very similar initiative to Open Sensor Network.
 \end{description}
 
 \subsection{Mentor for the FFTx pilot}
+The mentor for the FFTx pilot is Roger Baig Viñas and he will help Jorge Beltran to perform this project. Roger is from Barcelona and he studied Industrial and Electronic Engineering at Universitat Politècnica de Catalunya (UPC). He also did a master at Universitat Autònoma de Barcelona (UAB). 
+Now he is working in the Private Foundation guifi.net by the Open, Free and Neutral Network where he does tasks as international projects, dissemination and promotion. Roger also takes part in CONFINE (FP7) and C4EU (CIP) projects.
+
 
 \subsection{Mentor for the FEW pilot}
+As explained before, Nacho Justel will be guided by Giovanni Calcerano from Provicia WiFi.
+Giovanni is graduated in Mathematics, and developed his carrer mostly as consultant in the field of high-level technical computing / scientific / statistical experience with over ten-year experience in the business sector. He is currently working at Provincia di Roma, being the responsably of European projects as OpenData, among others.
+For more information, about his professional career, you can take a look at his LinkedIn profile.
 
-\section{Internal Workshop}
-In order to check the progress of every pilot, there have been two workshops. In the first one, all the pilots which are carried out by degree or PhD students of the UPF where introduced to some of the partners belonging to the BuB branch of the C4EU project. These are the papers that where presented in the first workshop:
+\subsection{Mentor for the Mobile Node pilot}
+Fernando, will be guided by Efra\'in Foglia. Efra\'in has been working in different areas related to Design and Art. Nowadays he is doing research on the field of the relation between Design \& Art and digital networks, taking into account also their social and political implications. He is an active member of guifi.net and exo.cat, two platforms which work on the design and deployment of open networks. 
+\par 
+He graduated in Design of Graphic Communication in UAM (Mexico) and is currently working on his PhD at the Universitat de Barcelona (UB) about "`\textit{Art in MediaCity}"'     
+
+
+\section{BuB4EU Workshops}
+\label{sec:workshops}
+Together with the mailing list, one of the main tools to exchange results and foster the discussion is the organization of workshops.
+This workshops are announced on the mailing list and are open for everyone to participate.
+There are two differentiated participation options: attendant and speaker.
+
+The speakers are those that are more deeply involved in the project and prepare a short paper (one page) and some supporting slides for the talk.
+The attendants simply listen and offer comments and feedback.
+
+Each of the workshops has been organized by one of the members of the team.
+
+\subsection{1st BuBEU workshop}
+
+Date: July 24th.
+
+Organizer: Jaume Barcelo
+
+Attendants: 
+\begin{itemize}
+	\item Daniele Arena
+    \item Roger Baig
+	\item Jaume Barcelo 	
+    \item Ramon Roca
+	\item Jorge Beltran 	
+    \item Fernando Gros
+	\item Alejandro Andreu 	
+    \item Nacho Justel
+	\item Boris Bellalta
+    \item Luis Sanabria
+    \item Simon Oechsner
+    \item Albert Domingo
+\end{itemize}
+
 \begin{itemize}
 	\item \textbf{Let the networks grow, let the knowledge flow}: It is an introduction both to the workshop and the BuB concept done by 							Jaume Barcelo.
 	\item \textbf{Introduction to Open Sensors Network}: Describes the main objectives and issues that will affect the OSN Pilot, which is 					executed	by Alejandro Andreu.
@@ -612,7 +708,15 @@ In order to check the progress of every pilot, there have been two workshops. In
 	\item \textbf{Free Europe WiFi}: Describes the main aspects of the pilot and briefly analyzes some of the issues with which they will 						have to	deal with. This pilot is executed by Nacho Justel.
 \end{itemize}
 
-The second workshop, consisted of a set of presentations and demos that tried to show to the partners the current progress of each pilot. The following are the papers that were presented: 
+\subsection{2ond BuBEU workshop}
+
+The second workshop, consisted of a set of presentations and demos that tried to show to the partners the current progress of each pilot.
+
+Date: October 4th.
+
+Organizer: Fernando Gros
+
+The following are the papers that were presented: 
 
 \begin{itemize}
 	\item \textbf{Open Sensor Networks}: Alejandro Andreu
@@ -627,8 +731,44 @@ Note that there have been some issues related to some of the pilots. The pilot C
 
 The C4EU NQN pilot has suffered some delays due to issues with the communication between the UPF and the MDDA. We will continue waiting for a reasonable time to see if that problems can be solved and the pilot can start.
  
+\subsection{3rd BuBEU workshop}
+
+At the third workshop were presented the project charters of the BuB projects that are carried out by UPF students. Also a new pilot were proposed. 
+
+Let's review one by one the al the point from the workshop: 
+
+Date: 19th November 2012
+
+Organizer: Nacho Justel
+
+Attendants: 
+\begin{itemize}
+	\item Miquel Oliver 	\item Roger Baig
+	\item Jaume Barcelo 	\item Adriana Marti
+	\item Jorge Beltran 	\item Fernando Gros
+	\item Alejandro Andreu 	\item Nacho Justel
+	\item Pedro Vilchez 	
+\end{itemize}
+
+Talks:
+\begin{itemize}
+	\item \textbf{Summary about Bologna C4EU meeting}: Miquel Oliver and Nacho Justel
+	\item \textbf{FreeEurope WiFi Project Charter}: Nacho Justel 
+	\item \textbf{Open Sensor Networks Project Charter}: Alejandro Andreu
+	\item \textbf{FFTF/FFTP Project Charter}: Jorge Beltran	
+	\item \textbf{Mobile Node Project Presentation}: Fernando Gros
+	\item \textbf{New pilot proposal: Guifi.net structure for UPF}: Pedro Vilchez 
+	\item \textbf{BuB C4EU web page status}: Adriana Martí
+\end{itemize}
+
+Due to some problems suffered about the communication between the UPF and the MDDA for the C4EU NQN pilot, Fernando will change his project to the before exposed Mobile Node project.
+
+Fernando and Jaume will met Efraín Foglia (proponent of the project) to discuss the particularities about the Mobile Node project.
+
 
 \section{Open mailing list}
+\label{sec:mailing}
+
 One of the tools we use to communicate progress status, questions or just to maintain contact between the different people who make up this working group, is the list of emails. This list is completely open and free, so anyone who wants can sign up to receive it.
 
 The list is provided by one of our partners, Guifi.net, and is accessible from the following link: https://lists.guifi.net/listinfo/bub. Are signed up to the list some components of this work team, partners and external stakeholders. We remark once again the full and complete opening thereof, to any person interested in the project. 
@@ -636,6 +776,7 @@ The list is provided by one of our partners, Guifi.net, and is accessible from t
 Any help, concern or comment is greatly appreciated and we urge all concerned to participate openly in him.
 
 \section{Web}
+\label{sec:web}
 
 Both \emph{Commons for Europe} and \emph{Code for Europe} have a webpage that present themselves to the world. For obvious reasons having a website is good and BuB should have one too. More people could be reached hence this kind of networks could become more popular.
 
@@ -644,8 +785,12 @@ This website should have a brief description explaining our goal as well as givi
 This website shall not be just a presentation letter but also have advanced functionalities for the parts already involved in it.
 
 \section{International Forums}
+\label{sec:forums}
 
 \subsection{Battlemesh}
+Two people from the Commons for Europe project participated in Battlemesh v5 (Athens, March 26th to April 1st) and presented the project there.
+Battlemesh is a yearly meeting of wireless community networks enthusiasts in which the latest routing protocols are tested.
+Battlemesh is attended by community networks leaders, and therefore it is the right place to get in touch with such communities.
 
 \subsection{International Summit of Wireless Community Networks}
 
@@ -657,12 +802,30 @@ Ramon Roca spoke in the opening event, but also participated during all summit, 
 
 Miquel Oliver (as representative of Univesitat Pompeu Fabra, participant in the Bottom-up Broadband project) talked about the C4EU project, and especially about the BuB branch of the project. And Federico Capoano, from Caspur, presented about the need of creating accessible documentation for non-geeks.
 
+\subsection{5th International Workshop on Multiple Access Communications}
+
+This workshop took place in Maynooth (Ireland) on the 19th and 20th of November.
+The technical program comprised talks and demonstrations of the latest advancements of the field by academy and industry leading institutions.
+
+Luis Sanabria presented the demo ``Spectrum Sensing with USRP-E110'' to detect the availability of white spaces in the band used for SuperWifi communications \cite{sanabria2012ssu}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width = 11cm]{figures/luis.eps}
+  \caption{Demo ``Spectrum Sensing with USRP-E110'' (UPF) and demo ``Network Coding as a WiMAX Link Reliability Mechanism: an Experimental Demonstration'' (MIT)}
+  \label{fig:tvChannels}
+\end{figure}
+~          
 
 
 \section{Conclusion}
 \label{sec:conclusion}
-And this is the conclusion.
+This report covers the training and networking efforts in the BuB4EU branch of the Commons for Europe project.
+As students are actively participating in this project, it is of paramount importance to provide them with help and guidance to make sure that they can accomplish their goals.
+Each student is assigned both an experienced BuB mentor and an academic advisor, which have complementing roles.
 
+As we are interested in bottom up initiatives, it is very important to build a community with people and links that span beyond the consortium.
+To this end, we maintain an open mailing list and organize open workshops to attract new participants interested in the BuB concept.
 
 
 

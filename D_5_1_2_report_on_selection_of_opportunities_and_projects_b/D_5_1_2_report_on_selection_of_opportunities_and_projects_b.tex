@@ -83,7 +83,7 @@
 
 % *** MISC UTILITY PACKAGES ***
 %
-%\usepackage{ifpdf}
+\usepackage{ifpdf}
 % Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
 % compilation based on whether the output is pdf or dvi.
 % usage:
@@ -372,6 +372,7 @@
 % *** PDF, URL AND HYPERLINK PACKAGES ***
 %
 \usepackage{url}
+\usepackage[final]{pdfpages}
 % url.sty was written by Donald Arseneau. It provides better support for
 % handling and breaking URLs. url.sty is already installed on most LaTeX
 % systems. The latest version can be obtained at:
@@ -411,10 +412,13 @@
 %
 
 \author{
-	Name~Name, %\IEEEmembership{Member,~IEEE,}
-    and~Name~Name% \IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
+	Fernando~Gros, %\IEEEmembership{Member,~IEEE,}
+	Alejandro~Andreu, %\IEEEmembership{Member,~IEEE,}
+	Ignacio~Justel, %\IEEEmembership{Member,~IEEE,}
+	Jorge~Beltran, %\IEEEmembership{Member,~IEEE,}
+    and~Jaume~Barcelo% \IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
 \thanks{
-Affiliation
+The authors are with Universitat Pompeu Fabra
 }
 }
 
@@ -473,7 +477,9 @@ Affiliation
 
 \begin{abstract}
 %\boldmath
-This is the abstract
+This report describes the first pilots that have been selected for execution in the BuB4EU branch of the Commons for Europe project.
+The selection criteria that have been used are introduced and then a brief description of the pilots is provided.
+The pilots are: ``Open Sensor Network'', ``Free Europe WiFi'', ``Northern Quarter Network'', ''FFTx'' and ``Mobile Node''.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -484,7 +490,7 @@ This is the abstract
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
- Bottom-up-Broadband (BuB), wifi, super-wifi, fiber, sensor networks
+ Bottom-up-Broadband (BuB), wifi, fiber, sensor networks, BuB pilots
 %Slotted Aloha, game theory, contention control, media access control.
 \end{IEEEkeywords}
 
@@ -531,12 +537,42 @@ This is the abstract
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{T}{his} is the introduction blah blah blah blah blah blah blah.
-Blah blah blah blah.
-Blah blah blah blah.
-Blah blah blah blah.
+\IEEEPARstart{T}{his} report presents the advancements in the pilots carried out in the BuB4EU branch of the C4EU European project.
+Section \ref{sec:about} explains that it is a collaborative document and how to contribute.
+The selection criteria that were used to choose the pilots are described in \ref{sec:selection}.
+Sections \ref{sec:osn}, \ref{sec:few}, \ref{sec:nqn}, \ref{sec:fft} and \ref{sec:mon} introduce the pilots considered in the project.
+The concluding remarks are offered in Section \ref{sec:conclusion}.
+
+The appendices contain the project charters prepared for each of the students for each of the pilots.
+
+\section{About this document}
+\label{sec:about}
+
+This report has been produced using open source tools such as {\LaTeX} \cite{lamport1994ldp} and \emph{git} \cite{chacon2009pg}.
+{\LaTeX} is widely used in academia to prepare print-class documents.
+It automatically takes care of numbering, cross-referencing, tables of contents, bibliography, etc.
+\emph{git} is a high performance distributed revision control which is used in many open source projects, such as the linux kernel.
+Git makes it easy and safe to collaborate as each contributor works on his personal copy.
+Good contributions can be easily shared with others, and it is always possible to revert to a previous version.
+
+Our git repository is publicly available in \emph{github}:
+
+https://github.com/jbarcelo/C4EU-deliverables
+
+Anyone who is familiar with {\LaTeX} and \emph{github} can contribute to this document.
+The firs step is to make a copy (a \emph{fork} in \emph{github} jargon).
+The contributor can work in this copy and make changes to improve the document.
+After that, it is necessary to request that these changes are merged into the original copy of the document (a \emph{pull request} in github jargon).
+
+If you see anything that can be improved, feel free to contribute.
+This document is alive in the sense that it will keep evolving as long as contributors make changes and improve it.
+
+The system automatically keeps track of all the contributors and their contributions. 
+It is possible to see who is contributing more actively and which are the exact changes made by each contributor.
+And everything is public on the web.
 
 \section{Selection Criteria and Pilot Selection}
+\label{sec:selection}
 
 Out of the twelve pilot proposals that were collected in the first call for pilots \cite{barcelo2012bub}, we selected a few of them to be considered within the C4EU project.
 The pilots we are focusing on are the Open Sensor Network pilot (OSN), the Free Europe WiFi pilot (FEW), the Fiber From The X pilot (FFTx), the Northern Quarter Network pilot (NQN) and the Mobile Mesh Node pilot (MMN).
@@ -563,7 +599,7 @@ There are already some of the pilots that mix different technologies and the vis
 \renewcommand{\arraystretch}{1.3}
 % if using array.sty, it might be a good idea to tweak the value of
 %\extrarowheight as needed to properly center the text within the cells
-\caption{Technologies under consideration}
+\caption{Technologies under consideration \cite{barcelo2012bub} }
 \label{tab:technologies}
 \centering
 \begin{tabular}{|c|p{5cm}|}
@@ -581,7 +617,12 @@ Super-WiFi & Future technology, wireless, medium throughput, longer propagation 
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\linewidth]{hybrid}
+%\includegraphics[width=\linewidth]{hybrid}
+\ifpdf
+\includegraphics[width=\columnwidth]{figures/hybrid.pdf}
+\else
+\includegraphics[width=\columnwidth]{figures/hybrid.eps}
+\fi
 \caption{A hybrid BuB deployment combining different technologies.}
 \label{fig:hybrid}
 \end{figure}
@@ -590,6 +631,7 @@ We have also chosen pilots that can cover multiple cities in Europe.
 With the exception of the pilots involving fiber (NQN, FFTx) which by its very nature are localized, the others can be tested and demonstrated in any of the participating cities.
 
 \section{The Open Sensor Network Pilot}
+\label{sec:osn}
 
 This pilot is focused on deploying a sensor network which would gather real time data from the environment, such as air quality, noise pollution, etc. This information would be then uploaded to an open data portal to make it publicly available. The ultimate objective of this project is to let developers use this data to build applications that can improve the daily lives of the citizens.
 
@@ -602,6 +644,7 @@ For this purpose common wireless protocols such as Wi-Fi, Bluetooth and ZigBee h
 Several sensor board options were available. The university already had Crossbow Telos B nodes which run the TinyOS operating system. This option has many advantages such as built-in multithreading and low-level option tuning. Also, it is open source. Another good choice is Arduino, an open source prototyping system which is commonly used nowadays and has a very large community. Since it is designed with simplicity in mind it lacks the complete set of features that TinyOS can provide, and consequently it is more lightweight, which sinergizes with the project purpose of deploying a battery-powered wireless sensor network.
 
 \section{The Free Europe Wifi Pilot}
+\label{sec:few}
 
 The Free Europe WiFi project is based in the original idea that our Italian colleagues are working on. It is called Provincia WiFi, and tries to offer free WiFi internet connection to any Italian citizen. By now it is only available in some regions of that country, so the idea is to extend it to whole Europe. So, our work is to start establishing a similar project in Spain, always having full interoperability with the original project. Thereby, we want to take the next step to extend it to Europe.
 
@@ -609,10 +652,97 @@ In summary, the final idea is: being a European citizen, it is possible to conne
 
 Notice the complexity, not only technical of the project, but also on every European country telecommunication laws. Every region has its own laws in reference of telecommunication organizations, and in the way citizen use the service. From keeping data from the connected users, to meet the rules of the market it's just an example.
 
+This pilot is being carried out by Nacho Justel.
+
 Because of this wide range of different possibilities, it is difficult to create a totally generic prototype, so in order to design it there are many factors to consider.
+
+Talking about the technical aspects of the system, it base its functionality on OpenWISP. OpenWISP (Open Wireless Internet Service Provider) is a software platform that can be used to provide a full, complete WiFi service. It is actually divided into five different modules that will be explained below:
+
+\begin{enumerate}
+\item[\fbox{1}] \textbf{OpenWISP User Management System:} 
+
+It is a Ruby on Rails application, that interacts directly with the users. By using this module, the user can get access to the OpenWISP global system to get internet access, password recovery if needed and manage his account.
+
+This module is directly related with third party modules as the FreeRadius server with a MySQL database to sign-up/sign-out and save user information. Once the user is registered in the service, and every time he tries to connect to the network, he will be asked to introduce his username and password to start surfing Internet.
+
+This application has been designed to be integrated with RADIUS authentication solutions.
+
+At this moment, OpenWISP User Management System is being developed to be integrated into FreeRADIUS v2.1, so other implementations are not currently supported.
+
+Some of its features are:
+\begin{itemize}
+\item User registration via mobile phone, ID card or credit card (Paypal IPN).
+\item User interface supporting most common browsers including mobile web browsers.
+\item Password recovery via mobile phone or email.
+\item Statistics of generated traffic per user.
+\item User administration via dedicated admin interface.
+\item Admin interface supports role based administration (operator, admin, superadmin).
+\item Via admin interface, new users can be added, modified, enabled/disabled or monitoring traffic per user/nationality and logins/registration.
+\item English and Italian language translations at the moment.
+\end{itemize}
+
+\item[\fbox{2}] \textbf{OpenWISP Geographic Monitoring:}
+
+It is a Ruby on Rails - HTML 5.0 based, web GUI that allows the management staff to get information about the geographic information of the deployed access points. It renders a geographic map of the status your networks: access point up/down/unknown (if an access point has an "unknown" status, then it would not be able to download the configuration to connect to the system from the OpenWISP Access Point Manager. \\
+
+\item[\fbox{3}]\textbf{OpenWISP Captive Portal Manager:}
+
+It is a captive portal written from Scratch with Ruby on Rails. It allows the user surfing the Internet by enabling rules in the server firewall. This module is the operation center of all the system, so all the data that is generated or has as destination the system, will pass through this module. 
+
+Its main features are:
+\begin{itemize}
+\item Multiple captive portals (one per physical or virtual interface).
+\item RADIUS / Local authentication.
+\item Experimental traffic shaping per user.
+\item Multiple OS support.
+\item IPv6 support can be easily implemented.
+\end{itemize}
+
+
+\item[\fbox{4}]\textbf{OpenWISP Access Point Manager:}
+
+It is a Ruby on Rails based web GUI. This module allows the management staff to configure, monitorization and support of deployed access points.\\ It also stores value information about the network, as the amount of traffic each VPN generate, MAC addresses, geographical addresses and network setting, among other data. The access points download the configuration and settings from this module to establish a connection to the gateway.  
+
+
+\item[\fbox{5}]\textbf{OpenWISP Firmware:}
+
+It is a set of scripts (shell and web cgi) that sits on top of OpenWrt\footnote{OpenWrt is a linux distro for embedded devices that provides a fully writable file structure system with package management. This allows to customize devices keeping freedom from vendor configuration.}. OWF is a no visible module of the system. It is the firmware that every access point has installed to be able to connect to the network. Every time a new access point is connected to the network, it will download the settings from the Access Point Manager, as before explained. If an access point is rebooted without network connectivity, will get no configuration until it could establishes a connection with the OpenWISP Manager, so then, the configuration will be sent to it. 
+
+OpenWISP firmware provides a daemon for retrieving the configuration of some components at the manager:
+
+\begin{itemize}
+\item WiFi (currently only for madwifi-ng and ath9k drivers).
+\item Networking.
+\item Data layer traffic shaping.
+\item OpenVPN (data layer, TAP).
+\item Unix cron jobs
+\end{itemize}
+
+Far from only providing a daemon, it also has a web GUI where:
+\begin{itemize}
+\item Configuring basic net structure
+\item Network parameters.
+\item Configuring basic OpenWISP server settings.
+\item Performing test and technical fails menu.
+\end{itemize}
+
+\end{enumerate}
+
+Also there exists another application based on Ruby/Sinatra that communicates or interacts with the other modules using RESTful services. It is called \textbf{OpenWISP Middleware}.\\This module has different tasks to do depending on the other module that is talking with.
+
+\begin{itemize}
+
+\item By communicating with the OpenWISP Captive Portal Manager, it personalizes the captive page for a group of different access points.\item On the other hand, by interacting with the OpenWISP User Management System, OpenWISP Geographic Monitoring and OpenWISP Access Point Manager, it provides very useful information in a full duplex way.
+
+\end{itemize}
+
+By the moment, we are designing the technical aspects of the spanish implementation of the project, so as soon as we get the design, we will start programming the code to make a first deployment.
+
 
 
 \section{The Northern Quarter Network Pilot}
+\label{sec:nqn}
+
 This project consists, roughly speaking, on the design, implementation and testing of an optical fiber network in the Northern Quarter (NQ) area of Manchester. This network will provide public free Wi-Fi in that area of the city. The project will be led by the Manchester Digital Development Agency (MDDA), and all the designs and implementations will follow a model they have already developed.
 
 
@@ -622,17 +752,30 @@ The NQ is home to a wide range of SMEs from many sectors and is a good place for
 
 One of the most important aspects of the project, apart from designing and deploying the network, is defining a good pricing model for commercial use. It is a basic point, because it is crucial that the network becomes self-funding and sustainable after the conclusion of the C4EU project. It is, somehow, a critical aspect, and the success of the pilot will strongly depend on the success of the pricing definition. 
 
-\section{FTTx}
-The Rubi pilot consists of the design, implementation, testing and documentation of optical fiber in Rubi, but by some troubles, it has occurred delays in the implementation of fiber in Rubi, therefore without leaving aside this pilot we will realize a project called FFTx. This project will consist to implement the optical fiber over Bottom-Up Broadband (BuB) model. The FFTx name is because the study includes the main fiber deployments -FFTH/FFTF/FFTP Fiber From The Home/Farm/Premises.
+\section{FFTx}
+\label{sec:fft}
 
+The Rubi pilot consists of the design, implementation, testing and documentation of optical fiber in Rubi, but by some troubles, it has occurred delays in the implementation of fiber in Rubi, therefore without leaving aside this pilot we will realize a project called FFTx. This project will consist to implement the optical fiber under the Bottom-Up Broadband (BuB) model. The FFTx name is because the study includes the main fiber deployments -FFTH/FFTF/FFTP Fiber From The Home/Farm/Premises-. 
 
-To begin the project, we will do a study the BuB model, an investigation of existing fiber types and the advantages that they have over others transmission media. We will do too a comprehensive study on how the optical fiber in Gurb was implemented -Gurb is a municipality where has been successfully implemented the optical fiber over BuB model. Finally we will look for the possibility to carry out the implementation of optical fiber over this model in different municipalities (eg Rubi).
+To begin the project, we will do a study the BuB model, an investigation of existing fiber types and the advantages that they have over others transmission media. We will do too a comprehensive study on how the optical fiber in Gurb was implemented -Gurb is a municipality where has been successfully implemented the optical fiber under the BuB model-. Finally we will look for the possibility to carry out the implementation of optical fiber under this model in different municipalities (e.g. Rubi).
 
-\section{The Mobile Mesh Node Pilot}
+As you can see, the project has been divided in several tasks, each of them with an aim, but the part that consist of simulating the implementation of the optical fiber in different municipalities it is very important because if we can find the commons to develop and deploy this technology under the BuB model it would be a great contribution to our community.
+
+\section{The Mobile Node Pilot}
+\label{sec:mon}
+
+Within this pilot the main idea is to create a free transmission workstation that can be used in the urban space and contributes to the digital mesh through other networks.
+
+The project will consist on creating a mobile wireless workstation that builds or fits in an existent telecommunications 								infrastructure. It will have to be an auto-configurable device and will have the capability to interconnect with a wide range of 					different hardware. Furthermore, it will be able to work in many different spaces and without the need of an ISP.
+
+The project has already started and now it joins to the BuB4EU community in order to be documented and improved if possible.  
 
 \section{Conclusion}
 \label{sec:conclusion}
-And this is the conclusion.
+
+The first BuB4EU pilots to be executed in the framework of the C4EU European project have already been selected.
+Each of the students assigned to the pilots have provided a description as well as project charter document.
+The students will carefully document their pilots and make this documentation publicly available as a common resource to be shared by the community.
 
 
 
@@ -747,6 +890,14 @@ The views expressed in this technical report are solely those of the authors and
 % is flush with the other column.
 %\enlargethispage{-5in}
 
+\appendices
+
+\section{Appendix 1: Free Europe WiFi Project Charter}
+\includepdf[pages={1,2,4}]{projectcharter/projectcharterFEW.pdf}
+
+
+\section{Appendix 2: FFTx Project Charter}
+\includepdf[pages={1,2}]{projectcharter/projectcharterFFTx.pdf}
 
 
 % that's all folks
