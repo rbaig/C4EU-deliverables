@@ -83,7 +83,7 @@
 
 % *** MISC UTILITY PACKAGES ***
 %
-%\usepackage{ifpdf}
+\usepackage{ifpdf}
 % Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
 % compilation based on whether the output is pdf or dvi.
 % usage:
@@ -582,7 +582,12 @@ Super-WiFi & Future technology, wireless, medium throughput, longer propagation 
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\linewidth]{hybrid}
+%\includegraphics[width=\linewidth]{hybrid}
+\ifpdf
+\includegraphics[width=\columnwidth]{figures/hybrid.pdf}
+\else
+\includegraphics[width=\columnwidth]{figures/hybrid.eps}
+\fi
 \caption{A hybrid BuB deployment combining different technologies.}
 \label{fig:hybrid}
 \end{figure}
