@@ -531,12 +531,65 @@ This is the abstract
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{T}{his} is the introduction blah blah blah blah blah blah blah.
-Blah blah blah blah.
-Blah blah blah blah.
-Blah blah blah blah.
+\IEEEPARstart{T}{his} report summarizes the principles that drive our work, the identified best practices and to results obtained so far.
+As we promote collaboration, this document has been written in a collaborative way. 
+The details as well as the instructions to collaborate are provided in Section \ref{sec:about}.
+The core BuB principles are explained in Section \ref{sec:principles}.
+As there are several parallelisms between BuB and open source communities, we devote Section \ref{sec:open-source} to explore them.
+Wireless community networks have established a number of networking principles that foster collaboration, which are reviewed in Section \ref{sec:open-network}.
+The communication and discussion of results are critical for long term sustainability in BuB initiatives and for this reason we emphasize the importance of documentation and transparency in Section \ref{sec:documentation} and some guidelines to prepare workshops in \ref{sec:workshops}.
+We assess which is the current status of the project by means of the quantitative indicators examined in Section \ref{sec:indicators}.
+Finally, Section \ref{sec:conlusion} concludes this report.
+
+\section{About this document}
+\label{sec:about}
+
+This report has been produced using open source tools such as {\LaTeX} \cite{lamport1994ldp} and \emph{git} \cite{chacon2009pg}.
+{\LaTeX} is widely used in academia to prepare print-class documents.
+It automatically takes care of numbering, cross-referencing, tables of contents, bibliography, etc.
+\emph{git} is a high performance distributed revision control which is used in many open source projects, such as the linux kernel.
+Git makes it easy and safe to collaborate as each contributor works on his personal copy.
+Good contributions can be easily shared with others, and it is always possible to revert to a previous version.
+
+Our git repository is publicly available in \emph{github}:
+
+https://github.com/jbarcelo/C4EU-deliverables
+
+Anyone who is familiar with {\LaTeX} and \emph{github} can contribute to this document.
+The firs step is to make a copy (a \emph{fork} in \emph{github} jargon).
+The contributor can work in this copy and make changes to improve the document.
+After that, it is necessary to request that these changes are merged into the original copy of the document (a \emph{pull request} in github jargon).
+
+If you see anything that can be improved, feel free to contribute.
+This document is alive in the sense that it will keep evolving as long as contributors make changes and improve it.
+
+The system automatically keeps track of all the contributors and their contributions.
+It is possible to see who is contributing more actively and which are the exact changes made by each contributor.
+And everything is public on the web.
+
+\section{BuB Principles}
+\label{sec:principles}
+
+Bottom up broadband has its starting point in an unsatisfied need by the users.
+This users can be either individuals, communities, institutions, companies or other organizations.
+The users get involved in the planning, funding and deployment of the solution.
+
+Having a working solution is not the only goal in BuB initiatives.
+Even though approaches such as fast prototyping are encouraged in BuB, BuB might not always be the fastest or more economical way.
+
+In BuB there is also an interest in learning, in sharing and in collaborating.
+BuB is about educating the users and empowering them.
+For this reason, there is an emphasis on workshops, participative mailing lists and accessible documentation.
+
+It is also important to be inclusive and understand that everyone can contribute in one way or another.
+It is by no means restricted to experts or gurus.
+Everyone has some strengths and weaknesses, and by means of collaboration it is possible to combine the strengths of each of us to achieve more ambitious goals.
+
+As the African proverb says ``If you want to go fast, go alone. If you want to go far, go together.''
+
 
 \section{A parallelism with open source communities}
+\label{sec:open-source}
 
 The spirit of BuB is very similar to the open source initiative. Before diving into similarities, it is worth saying that the only significant difference is the user attitude. In a bottom up broadband context the user must provide some resources to become part of the resulting network, while in open source community both developers and users benefit from external contributions. Of course, both approaches are completely free.
 
@@ -547,10 +600,11 @@ From transparency comes derived works. That is, individuals and organizations ca
 As well as the open source definition states, any discrimination or restrictions take place in the BuB philosophy.
 
 
-\section{BuB Principles}
 
 
 \section{Open Network}
+\label{sec:open-network}
+
 Open network is a network that allows free connection for anyone, i.e. no restrictions to prevent someone else connecting to it and therefore promotes the growth of the network.
 
 
@@ -564,12 +618,16 @@ A misconception that people have about the open network is that it is not secure
 
 
 \section{Transparency and documentation}
+\label{sec:documentation}
+
 To achieve the goals set at the beginning of the project, it is paramount to have the necessary documentation to support the achievements and progress of the same. Not only for the fact of having it, but also to give help and support to potential new contributions from other members that look interested in the project. One of the qualities of Commons for Europe, is that it is completely and totally open, and anyone interested can contribute in a big or small way, depending on their knowledge or involvement. What is sought with this idea is to achieve that C4EU far from being a project of a team gets to be a project done by all.
 
 One of the main objectives which we desire to achieve is the fact of get C4EU expanded and taken place in the whole European Union. To accomplish this objective, it is essential, therefore, the fact of being transparent in all our actions and knowledge and try to give as much help as possible to help new integrators to achieve the project objectives. Whether through direct contributions or by providing documentation in which we rely to carry it out. For more information please visit the official web site of the project or take a look out code at GitHub.com.
 
 
 \section{Open Workshops Preparation}
+\label{sec:workshops}
+
 So far, there have been two workshops and both have been organized by people from the UPF. At this section, the details on how to prepare an open workshop will be provided.
 
 
@@ -587,6 +645,35 @@ As any other kind of meeting, some steps must be followed in order to organize a
  
 
 \section{Project indicators}
+\label{sec:inidcators}
+
+Some quantitative success indicators have been proposed.
+Table \ref{tab:indicators} summarize the indicators that have been consider and the rest of the section offers further details on each of them.
+
+\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+%\extrarowheight as needed to properly center the text within the cells
+\caption{Success indicators}
+\label{tab:indicators}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Indicator & Low & Medium & High \\
+Pilot Proposals & 0 - 10 & 11 - 15 & +15 \\
+Executed sensor pilots & 1 & 2 & +3 \\
+Number of executed WiFi/SuperWiFi pilots& 1 & 2 & +3 \\
+Number of executed fiber pilots& 1 & 2 & +3 \\
+Number of executed hybrid pilots& 0 & 1 & 2 \\
+BuB final users & 0-500 & 500-5000 & +5000 \\
+BuB raised fundss & 0-1000 & 1000-100,000& +100,000 \\
+Cities involved & 0-2 & 3-5 & +6 \\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
 
 \subsection{Pilot proposals 0-10/11-15/+15}
 
@@ -603,12 +690,16 @@ that are backing the proposal. The resources of the C4U project will
 be devoted to monitoring, supporting and documenting the selected
 pilots.
 
+So far we have received 14 pilot proposals.
+
 \subsection{Number of executed sensor pilots 1/2/3}
 The most promising sensor pilots of all the the received proposals
 will be executed. These pilots will receive full support from the
 partners involved in the BuB pilots work package and will be carefully
 documented to replicate the success models and disseminate the lessons
 learned.
+
+At this point, there is one sensor pilot being executed.
 
 \subsection{Number of executed superwifi/wifi pilots 1/2/3}
 The most promising superwifi and wifi pilots of all the the received
@@ -617,12 +708,17 @@ from the partners involved in the BuB pilots work package and will be
 carefully documented to replicate the success models and disseminate
 the lessons learned.
 
+At this point, there are two WiFi pilots in execution.
+One deals with public WiFi ofering while the other addresses mobile WiFi in combination with mesh technology.
+
 \subsection{Number of executed fiber pilots 1/2/3}
 The most promising fiber pilots of all the the received proposals will
 be executed. These pilots will receive full support from the partners
 involved in the BuB pilots work package and will be carefully
 documented to replicate the success models and disseminate the lessons
 learned.
+
+There is one fiber pilot being executed at this moment.
 
 \subsection{ Number of executed hybrid pilots 0/1/2}
 Some of the pilots will combine more of one of the technologies of
@@ -634,6 +730,8 @@ two different technologies will be counted thrice. As an example, a
 hybrid wifi-sensor pilot counts as a wifi pilot, a sensor pilot and a
 hybrid pilot.
 
+There are preliminar talks to launch an hybrid pilot which studies the impact of a fiber connection in an urban wireless network.
+
 \subsection{BuB final users 0-500/500-5000/+5000}
 One of the goals of this project is to have an impact on a large
 number of citizens and institutions. To this end, we will estimate the
@@ -641,6 +739,8 @@ aggregate number of users of the pilots deployed in the project. As an
 example, if a BuB project provides Internet connectivity to a cultural
 center, we will estimate how many people (including staff and
 visitors) have benefited from the pilot.
+
+At this point, none of the pilots has been completed and therefore this metric is difficult to estimate.
 
 \subsection{BuB raised funds 0-1000eur/1000-100,000eur/+100,000eur}
 The BuB principle requires involvement and commitment from the part of
@@ -651,12 +751,26 @@ indicator reflects the amount of BuB money that is raised from sources
 different than the project. These should cover the major part of the
 expenses of the pilots using commercial technologies (wifi, fiber).
 
+Some of the pilots have raised over 18,000 Euro in crowdfunding.
+Nevertheless, the total amount of money will be difficult to estimate until the pilots are completed.
+Figure \ref{fig:crowdfunded} shows an example of a crowdfunded initiative in the goteo.org crowdfunding platform.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width = 11cm]{figures/crowdfunded.eps}
+  \caption{An example of a crowdfunded initiative in goteo.org (in Spanish)}
+  \label{fig:crowdfunded}
+\end{figure}
+
 \subsection{Cities  involved in the pilots 0-2/3-5/+6}
 One of the goals of the project is to geographically spread success
 models across Europe, and to establish successful collaborations among
 champions that share the same goals in different locations. This goal
 will be fulfilled if the projects are executed in several different
 cities.
+
+So far we have pilots in Gurb (Vic), Barcelona, London, the cities of the province of Rome.
+Some of the pilots are mobile or portable and can easily spread to a large number of cities.
 
 \section{Conclusion}
 \label{sec:conclusion}
