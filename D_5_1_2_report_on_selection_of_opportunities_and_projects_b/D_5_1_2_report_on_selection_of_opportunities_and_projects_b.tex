@@ -372,7 +372,7 @@
 % *** PDF, URL AND HYPERLINK PACKAGES ***
 %
 \usepackage{url}
-\usepackage{pdfpages}
+\usepackage[final]{pdfpages}
 % url.sty was written by Donald Arseneau. It provides better support for
 % handling and breaking URLs. url.sty is already installed on most LaTeX
 % systems. The latest version can be obtained at:
@@ -840,10 +840,16 @@ The views expressed in this technical report are solely those of the authors and
 % is flush with the other column.
 %\enlargethispage{-5in}
 
-\section{Appendix}
+\appendices
 
-\subsection{Appendix 1: Free Europe WiFi Project Charter}
+\section{Appendix 1: Free Europe WiFi Project Charter}
 \includepdf[pages={1,2,4}]{projectcharter/projectcharterFEW.pdf}
+
+
+\section{Appendix 2: FFTx Project Charter}
+\includepdf[pages={1,2}]{projectcharter/projectcharterFFTx.pdf}
+
+
 % that's all folks
 \end{document}
 
