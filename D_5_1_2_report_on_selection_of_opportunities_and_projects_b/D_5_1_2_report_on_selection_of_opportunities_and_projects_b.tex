@@ -551,8 +551,8 @@ The appendices contain the project charters prepared for each of the students fo
 This report has been produced using open source tools such as {\LaTeX} \cite{lamport1994ldp} and \emph{git} \cite{chacon2009pg}.
 {\LaTeX} is widely used in academia to prepare print-class documents.
 It automatically takes care of numbering, cross-referencing, tables of contents, bibliography, etc.
-\emph{git} is a high performance distributed revision control which is used in many open source projects, such as the linux kernel.
-Git makes it easy and safe to collaborate as each contributor works on his personal copy.
+\emph{Git} is a high performance distributed revision control which is used in many open source projects, such as the linux kernel.
+Git makes it easy and safe to collaborate as each contributor works on his or her own personal copy.
 Good contributions can be easily shared with others, and it is always possible to revert to a previous version.
 
 Our git repository is publicly available in \emph{github}:
@@ -575,7 +575,7 @@ And everything is public on the web.
 \label{sec:selection}
 
 Out of the twelve pilot proposals that were collected in the first call for pilots \cite{barcelo2012bub}, we selected a few of them to be considered within the C4EU project.
-The pilots we are focusing on are the Open Sensor Network pilot (OSN), the Free Europe WiFi pilot (FEW), the Fiber From The X pilot (FFTx), the Northern Quarter Network pilot (NQN) and the Mobile Mesh Node pilot (MMN).
+The pilots we are focusing on are the Open Sensor Network pilot (OSN), the Free Europe WiFi pilot (FEW), the Fiber From The X pilot (FFTx), the Northern Quarter Network pilot (NQN) and the Mobile Node pilot (MON).
 
 A first selection criteria was the existence of a community that backed the pilot.
 For the Open Sensor Network pilot, it exists a closely related initiative called Smart Citizen (\url{www.smartcitizen.me}) that has rised around 18,000 Euro in crowdfunding, and therefore we believe there is interest from the part of the citizenship for these kind of technologies.
@@ -591,7 +591,7 @@ Another criteria for selection has been the diversity of technologies.
 Tab. \ref{tab:technologies} taken from \cite{barcelo2012bub} summarizes the advantages and shortcoming of the different technologies.
 At this stage of the project, SuperWifi is not yet mature enough to serve the goals of the BuB initiatives, as it is still in a research stage.
 
-Regarding the distribution of the pilots with respect to technologies, there is one pilot for sensor nodes (OSN), two involving WiFi (NQN, FEW), two involving fibre (FFTx, NQN), and one involving a mobile mesh node (MMN).
+Regarding the distribution of the pilots with respect to technologies, there is one pilot for sensor nodes (OSN), two involving WiFi (NQN, FEW), two involving fibre (FFTx, NQN), and one involving a mobile mesh node (MON).
 There are already some of the pilots that mix different technologies and the vision is that in the future, as they evolve, the different pilots and technologies can be seamless combined as in Fig. \ref{fig:hybrid}.
 
 \begin{table}[!t]
@@ -639,7 +639,7 @@ Since this project follows a \emph{BuB} approach each user shall have its own no
 
 As a power supply there shall be at least two options because each node should have some degree of independency. After all, there is not a predefined environment for these sensors to work on.
 
-For this purpose common wireless protocols such as Wi-Fi, Bluetooth and ZigBee have been compared since this decision will have direct impact on the projectfuture. Although Wi-Fi and Bluetooth have good data rates they are not designed to have a low power consumption which is a key aspect. Also, ZigBee has a low complexity and the best range ---around 550m---, apart from admitting several topologies. Its data rate would be its only drawback, but sensors don't transmit data this often hence Zigbee has been chosen to become the working protocol.
+For this purpose common wireless protocols such as Wi-Fi, Bluetooth and ZigBee have been compared since this decision will have direct impact on the project future. Although Wi-Fi and Bluetooth have good data rates they are not designed to have a low power consumption which is a key aspect. Also, ZigBee has a low complexity and the best range ---around 550m---, apart from admitting several topologies. Its data rate would be its only drawback, but sensors don't transmit data this often hence Zigbee has been chosen to become the working protocol.
 
 Several sensor board options were available. The university already had Crossbow Telos B nodes which run the TinyOS operating system. This option has many advantages such as built-in multithreading and low-level option tuning. Also, it is open source. Another good choice is Arduino, an open source prototyping system which is commonly used nowadays and has a very large community. Since it is designed with simplicity in mind it lacks the complete set of features that TinyOS can provide, and consequently it is more lightweight, which sinergizes with the project purpose of deploying a battery-powered wireless sensor network.
 
