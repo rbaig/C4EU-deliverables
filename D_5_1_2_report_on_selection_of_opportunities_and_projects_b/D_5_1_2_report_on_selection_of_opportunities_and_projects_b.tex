@@ -633,15 +633,25 @@ With the exception of the pilots involving fiber (NQN, FFTx) which by its very n
 \section{The Open Sensor Network Pilot}
 \label{sec:osn}
 
-This pilot is focused on deploying a sensor network which would gather real time data from the environment, such as air quality, noise pollution, etc. This information would be then uploaded to an open data portal to make it publicly available. The ultimate objective of this project is to let developers use this data to build applications that can improve the daily lives of the citizens.
+This pilot is focused on deploying a sensor network which would gather real time data from the environment, such as air quality, noise pollution, etc. This information would be then uploaded to an \emph{open data} portal to make it publicly available. The ultimate objective of this project is to let developers use this data to build applications that can improve the daily lives of the citizens.
+
+\emph{Open data} platforms have proven their usefulness many times, and some countries around the globe are already publishing data into their own portals. However, in order to prevent this ``localization'', more global solutions must be used. Good examples are \emph{Cosm} (former Pachube), \emph{UNDP Open Data}, etc.
+
+Not only developers can create new kinds of applications for the citizenship but also help people realize the conditions in which they live. This knowledge leads ultimately to react in order to improve their environment.
 
 Since this project follows a \emph{BuB} approach each user shall have its own node (or several), which, at the same time would add resources to this network. In case not all nodes aren't connected to the Internet there must be a protocol to interconnect these nodes.
 
 As a power supply there shall be at least two options because each node should have some degree of independency. After all, there is not a predefined environment for these sensors to work on.
 
-For this purpose common wireless protocols such as Wi-Fi, Bluetooth and ZigBee have been compared since this decision will have direct impact on the project future. Although Wi-Fi and Bluetooth have good data rates they are not designed to have a low power consumption which is a key aspect. Also, ZigBee has a low complexity and the best range ---around 550m---, apart from admitting several topologies. Its data rate would be its only drawback, but sensors don't transmit data this often hence Zigbee has been chosen to become the working protocol.
+For this purpose common wireless protocols such as Wi-Fi, Bluetooth and ZigBee have been compared since this decision will have direct impact on the project future. Although Wi-Fi and Bluetooth have good data rates they are not designed to have a low power consumption which is a key aspect. Also, ZigBee has a low complexity and the best range ---around 550m---, apart from admitting several topologies. Its data rate is the only drawback, but sensors don't transmit data that often hence Zigbee has been chosen to become the working protocol.
 
-Several sensor board options were available. The university already had Crossbow Telos B nodes which run the TinyOS operating system. This option has many advantages such as built-in multithreading and low-level option tuning. Also, it is open source. Another good choice is Arduino, an open source prototyping system which is commonly used nowadays and has a very large community. Since it is designed with simplicity in mind it lacks the complete set of features that TinyOS can provide, and consequently it is more lightweight, which sinergizes with the project purpose of deploying a battery-powered wireless sensor network.
+Several sensor board options were available. The university already had Crossbow Telos B nodes which run the TinyOS operating system. This option has many advantages such as built-in multithreading and low-level option tuning. Also, it is open source. Another good choice is Arduino, an open source prototyping system which is commonly used nowadays and has a very large community. Since it is designed with simplicity in mind it lacks the complete set of features that TinyOS can provide, and consequently it is more lightweight, which sinergizes with the project purpose of deploying a low-power wireless sensor network.
+
+The approach that will be taken to combine these technologies requires a third element, a low-end server to manage all the information. The data will travel between nodes and finally will arrive to the sink (server) which would then upload data to the Internet. The sink can be any PC but in this case a \emph{Raspberry Pi} is the best choice. It is a cheap, low-power, Linux-based PC that has the size of a credit card.
+
+By the end of 2012 it is expected to have a working point-to-point communication as well as uploading gathered data to the Internet. In the first three months a full mesh network shall be working and also a simple web application so users who have a server can point where this is and save resources to their fellows. Finally, until the beginning of June all the necessary documentation for the project to be adapted and/or replicated shall be completed.
+
+
 
 \section{The Free Europe Wifi Pilot}
 \label{sec:few}
