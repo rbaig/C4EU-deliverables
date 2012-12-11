@@ -382,6 +382,7 @@
 
 
 \usepackage{fancyhdr}
+\usepackage{lastpage}
 \renewcommand{\headheight}{0.4in}
 \setlength{\headwidth}{\textwidth}
 \fancyhead[L]{
@@ -395,6 +396,7 @@
 C4EU 5.1.2: Report on Selection of Opportunities and Projects -b
 }
 \pagestyle{fancy}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
 
 
 
@@ -489,6 +491,7 @@ The authors are with Universitat Pompeu Fabra
 
 % make the title area
 \maketitle
+\thispagestyle{fancy}
 
 
 \begin{abstract}
