@@ -380,6 +380,24 @@
 % \url{my_url_here}.
 
 
+\usepackage[final]{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+%\renewcommand{\headheight}{0.4in}
+%\setlength{\headwidth}{\textwidth}
+%\fancyhead[L]{
+%\ifpdf
+%\includegraphics[height=0.15in]{figures/COM4EU_Logo.pdf}
+%\else
+%\includegraphics[height=0.15in]{figures/COM4EU_Logo.eps}
+%\fi
+%}
+%\fancyhead[R]{ % right
+%C4EU 5.1.2: Report on Selection of Opportunities and Projects -b
+%}
+%\pagestyle{fancy}
+%\cfoot{Page \thepage\ of \pageref{LastPage}}
 
 
 
@@ -398,7 +416,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Fiber from the Farm\\ (C4EU 5.4.1: Report on Pilots on Fiber Deployment)}
+\title{Fiber From The Farm (FFTF)\\ (C4EU 5.4.1: Report on Pilots on Fiber Deployment)}
 %
 %
 % author names and IEEE memberships
@@ -411,18 +429,17 @@
 %
 
 \author{
-%TODO Name~Name, %\IEEEmembership{Member,~IEEE,}
-%TODO and~Name~Name% \IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
-Roger Baig Vi\~nas,
-Albert Boix Molas,
-Llu\'{i}s Dalmau Junyent,
-Pau Escrich Garcia,
-Marc Mund\'{o} Comerma,
-Ramon Roca i Ti\'{o}
-\thanks{
-%TODO Affiliation
-Fundaci\'{o} Privada per a la Xarxa Oberta, Lliure i Neutral guifi.net
-}
+  Roger~Baig~Vi\~nas,
+  Albert~Boix~Molas,
+  Llu\'{i}s~Dalmau~Junyent,
+  Pau~Escrich~Garcia,
+  Miquel~Martos,
+%%TODO 2nd Miquel's last name
+  Marc~Mund\'{o}~Comerma,
+  Ramon~Roca~Ti\'{o}
+  \thanks{
+    Fundaci\'{o} Privada per a la Xarxa Oberta, Lliure i Neutral guifi.net
+  }
 }
 
 
@@ -528,21 +545,21 @@ This is the abstract
 \label{sec:intro}
 \input{sect1/intro}
 
-%\section{Related Work}
-%\label{sec:related_work}
-%\input{sect2/related_work}
-%
-%\section{Implementation of an Energy Detection Sensor with USRP-E110}
-%\label{sec:implementation}
-%\input{sect3/implementation}
-%
-%\section{Results}
-%\label{sec:results}
-%\input{sect4/results}
-%
-%\label{sec:conclusion}
-%\label{sec:conclusions}
-%\input{sect5/conclusions}
+\section{Deployments}
+\label{sec:depolyments}
+\input{sect2/deployments}
+
+\section{Points-Of-Presence (POPs)}
+\label{sec:POPs}
+\input{sect3/pops}
+
+\section{Results}
+\label{sec:results}
+\input{sect4/results}
+
+\label{sec:conclusion}
+\label{sec:conclusions}
+\input{sect5/conclusions}
 
 
 
