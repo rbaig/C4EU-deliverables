@@ -130,7 +130,7 @@
 % *** GRAPHICS RELATED PACKAGES ***
 %
 \ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
+   \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
   % \graphicspath{{../pdf/}{../jpeg/}}
   % and their extensions so you won't have to specify these with
@@ -140,7 +140,10 @@
   % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
   % will default to the driver specified in the system graphics.cfg if no
   % driver is specified.
-   \usepackage[dvips]{graphicx}
+   %\usepackage[dvips]{graphicx}
+
+   \usepackage{epstopdf}
+
   % declare the path(s) where your graphic files are
   % \graphicspath{{../eps/}}
   % and their extensions so you won't have to specify these with
@@ -379,6 +382,18 @@
 % Read the url.sty source comments for usage information. Basically,
 % \url{my_url_here}.
 
+\usepackage{fancyhdr}	
+\usepackage{lastpage}
+\renewcommand{\headheight}{0.4in}
+\setlength{\headwidth}{\textwidth}
+\fancyhead[L]{
+	\includegraphics[height=0.15in]{figures/COM4EU_Logo.eps}
+}
+\fancyhead[R]{ % right	
+	C4EU 5.5.1: Report on Super WiFi Pilots~~a
+}
+\pagestyle{fancy}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
 
 
 
@@ -469,7 +484,8 @@ Universitat Pompeu Fabra
 
 % make the title area
 \maketitle
-
+\thispagestyle{fancy}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
 
 \begin{abstract}
 %\boldmath
