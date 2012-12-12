@@ -380,6 +380,18 @@
 % \url{my_url_here}.
 
 
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\renewcommand{\headheight}{0.4in}
+\setlength{\headwidth}{\textwidth}
+\fancyhead[L]{
+  \includegraphics[height=0.15in]{figures/COM4EU_Logo.eps}
+}
+\fancyhead[R]{ % right
+C4EU 5.5.1: Report on support actions - Training and Networking -a
+}
+\pagestyle{fancy}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
 
 
 
@@ -473,7 +485,7 @@ The authors are with Universitat Pompeu Fabra
 
 % make the title area
 \maketitle
-
+\thispagestyle{fancy}
 
 \begin{abstract}
 %\boldmath

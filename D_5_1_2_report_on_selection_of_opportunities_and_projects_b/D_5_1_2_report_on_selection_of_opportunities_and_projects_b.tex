@@ -381,6 +381,22 @@
 % \url{my_url_here}.
 
 
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\renewcommand{\headheight}{0.4in}
+\setlength{\headwidth}{\textwidth}
+\fancyhead[L]{
+\ifpdf
+\includegraphics[height=0.15in]{figures/COM4EU_Logo.pdf}
+\else
+\includegraphics[height=0.15in]{figures/COM4EU_Logo.eps}
+\fi
+}
+\fancyhead[R]{ % right
+C4EU 5.1.2: Report on Selection of Opportunities and Projects -b
+}
+\pagestyle{fancy}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
 
 
 
@@ -445,6 +461,7 @@ The authors are with Universitat Pompeu Fabra
 
 
 % The paper headers
+%\markboth{\includegraphics[height=0.53in]{figures/COM4EU_Logo.eps} C4EU 5.1.2: Report on Selection of Opportunities and Projects -b}%
 \markboth{C4EU 5.1.2: Report on Selection of Opportunities and Projects -b}%
 {C4EU 5.1.2: Report on Selection of Opportunities and Projects -b}
 % The only time the second header will appear is for the odd numbered pages
@@ -474,6 +491,7 @@ The authors are with Universitat Pompeu Fabra
 
 % make the title area
 \maketitle
+\thispagestyle{fancy}
 
 
 \begin{abstract}
