@@ -83,7 +83,7 @@
 
 % *** MISC UTILITY PACKAGES ***
 %
-%\usepackage{ifpdf}
+\usepackage{ifpdf}
 % Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
 % compilation based on whether the output is pdf or dvi.
 % usage:
@@ -142,7 +142,7 @@
   % driver is specified.
    \usepackage[dvips]{graphicx}
   % declare the path(s) where your graphic files are
-  % \graphicspath{{../eps/}}
+   \graphicspath{{../figures/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
   % \DeclareGraphicsExtensions{.eps}
@@ -372,6 +372,7 @@
 % *** PDF, URL AND HYPERLINK PACKAGES ***
 %
 \usepackage{url}
+\usepackage[final]{pdfpages}
 % url.sty was written by Donald Arseneau. It provides better support for
 % handling and breaking URLs. url.sty is already installed on most LaTeX
 % systems. The latest version can be obtained at:
@@ -380,24 +381,22 @@
 % \url{my_url_here}.
 
 
-\usepackage[final]{pdfpages}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-
-%\renewcommand{\headheight}{0.4in}
-%\setlength{\headwidth}{\textwidth}
-%\fancyhead[L]{
-%\ifpdf
-%\includegraphics[height=0.15in]{figures/COM4EU_Logo.pdf}
-%\else
-%\includegraphics[height=0.15in]{figures/COM4EU_Logo.eps}
-%\fi
-%}
-%\fancyhead[R]{ % right
-%C4EU 5.1.2: Report on Selection of Opportunities and Projects -b
-%}
-%\pagestyle{fancy}
-%\cfoot{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headheight}{0.4in}
+\setlength{\headwidth}{\textwidth}
+\fancyhead[L]{
+\ifpdf
+\includegraphics[height=0.15in]{figures/COM4EU_Logo.pdf}
+\else
+\includegraphics[height=0.15in]{figures/COM4EU_Logo.eps}
+\fi
+}
+\fancyhead[R]{ % right
+C4EU 5.4.1: Report on Pilots on Fiber Deployment
+}
+\pagestyle{fancy}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
 
 
 
@@ -416,7 +415,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Fiber From The Farm (FFTF)\\ (C4EU 5.4.1: Report on Pilots on Fiber Deployment)}
+\title{Fiber From The Farm (FFTF)\\ \emph{(C4EU 5.4.1: Report on Pilots on Fiber Deployment)}}
 %
 %
 % author names and IEEE memberships
@@ -433,15 +432,13 @@
   Albert~Boix~Molas,
   Llu\'{i}s~Dalmau~Junyent,
   Pau~Escrich~Garcia,
-  Miquel~Martos,
-%%TODO 2nd Miquel's last name
+  Miquel~Martos~Membrives,
   Marc~Mund\'{o}~Comerma,
   Ramon~Roca~Ti\'{o}
   \thanks{
     Fundaci\'{o} Privada per a la Xarxa Oberta, Lliure i Neutral guifi.net
   }
 }
-
 
 % note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
@@ -464,10 +461,11 @@
 
 
 % The paper headers
+%
 %\markboth{C4EU 2.4.1 Dissemination Report on Telecom Policymakers}%
 %{C4EU 2.4.1 Dissemination Report on Telecom Policymakers}
-\markboth{C4EU 5.4.1: Report on Pilots on Fiber Deployment}%
-{C4EU 5.4.1: Report on Pilots on Fiber Deployment}
+%\markboth{C4EU 5.4.1: Report on Pilots on Fiber Deployment}%
+%{C4EU 5.4.1: Report on Pilots on Fiber Deployment}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
@@ -491,10 +489,9 @@
 %\IEEEspecialpapernotice{(Invited Paper)}
 
 
-
-
 % make the title area
 \maketitle
+\thispagestyle{fancy}
 
 
 \begin{abstract}
@@ -544,6 +541,10 @@ This is the abstract
 \section{Introduction}
 \label{sec:intro}
 \input{sect1/intro}
+
+\section{About this document}
+\label{sec:about}
+\input{sect1_b/about}
 
 \section{Deployments}
 \label{sec:depolyments}
