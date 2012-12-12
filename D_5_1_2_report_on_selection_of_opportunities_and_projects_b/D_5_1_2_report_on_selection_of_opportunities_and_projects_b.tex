@@ -383,6 +383,8 @@
 
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
 \renewcommand{\headheight}{0.4in}
 \setlength{\headwidth}{\textwidth}
 \fancyhead[L]{
@@ -490,8 +492,8 @@ The authors are with Universitat Pompeu Fabra
 
 
 % make the title area
-\maketitle
-\thispagestyle{fancy}
+%\maketitle
+%\thispagestyle{fancy}
 
 
 \begin{abstract}
