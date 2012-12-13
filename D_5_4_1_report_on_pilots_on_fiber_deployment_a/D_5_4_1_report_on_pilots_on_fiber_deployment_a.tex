@@ -83,7 +83,7 @@
 
 % *** MISC UTILITY PACKAGES ***
 %
-%\usepackage{ifpdf}
+\usepackage{ifpdf}
 % Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
 % compilation based on whether the output is pdf or dvi.
 % usage:
@@ -142,7 +142,7 @@
   % driver is specified.
    \usepackage[dvips]{graphicx}
   % declare the path(s) where your graphic files are
-  % \graphicspath{{../eps/}}
+   \graphicspath{{../figures/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
   % \DeclareGraphicsExtensions{.eps}
@@ -372,6 +372,7 @@
 % *** PDF, URL AND HYPERLINK PACKAGES ***
 %
 \usepackage{url}
+\usepackage[final]{pdfpages}
 % url.sty was written by Donald Arseneau. It provides better support for
 % handling and breaking URLs. url.sty is already installed on most LaTeX
 % systems. The latest version can be obtained at:
@@ -380,6 +381,22 @@
 % \url{my_url_here}.
 
 
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\renewcommand{\headheight}{0.4in}
+\setlength{\headwidth}{\textwidth}
+\fancyhead[L]{
+\ifpdf
+\includegraphics[height=0.15in]{figures/COM4EU_Logo.pdf}
+\else
+\includegraphics[height=0.15in]{figures/COM4EU_Logo.eps}
+\fi
+}
+\fancyhead[R]{ % right
+C4EU 5.4.1: Report on Pilots on Fiber Deployment -a
+}
+\pagestyle{fancy}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
 
 
 
@@ -398,7 +415,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Fiber from the Farm\\ (C4EU 5.4.1: Report on Pilots on Fiber Deployment)}
+\title{Fiber From The Farm (FFTF)\\ \emph{(C4EU 5.4.1: Report on Pilots on Fiber Deployment -a)}}
 %
 %
 % author names and IEEE memberships
@@ -411,13 +428,17 @@
 %
 
 \author{
-	Name~Name, %\IEEEmembership{Member,~IEEE,}
-    and~Name~Name% \IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
-\thanks{
-Affiliation
+  Roger~Baig~Vi\~nas,
+  Albert~Boix~Molas,
+  Llu\'{i}s~Dalmau~Junyent,
+  Pau~Escrich~Garcia,
+  Miquel~Martos~Membrives,
+  Marc~Mund\'{o}~Comerma,
+  Ramon~Roca~Ti\'{o}
+  \thanks{
+    Fundaci\'{o} Privada per a la Xarxa Oberta, Lliure i Neutral guifi.net
+  }
 }
-}
-
 
 % note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
@@ -440,8 +461,11 @@ Affiliation
 
 
 % The paper headers
-\markboth{C4EU 2.4.1 Dissemination Report on Telecom Policymakers}%
-{C4EU 2.4.1 Dissemination Report on Telecom Policymakers}
+%
+%\markboth{C4EU 2.4.1 Dissemination Report on Telecom Policymakers}%
+%{C4EU 2.4.1 Dissemination Report on Telecom Policymakers}
+%\markboth{C4EU 5.4.1: Report on Pilots on Fiber Deployment -a}%
+%{C4EU 5.4.1: Report on Pilots on Fiber Deployment -a}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
@@ -465,15 +489,15 @@ Affiliation
 %\IEEEspecialpapernotice{(Invited Paper)}
 
 
-
-
 % make the title area
 \maketitle
+\thispagestyle{fancy}
 
 
 \begin{abstract}
 %\boldmath
-This is the abstract
+Optical Fiber is certainly the best technology available for data transmission in terms bandwidth, latency, reliability and stability. As installation costs decrease, it is expanding beyond its original realm and major application in the carrier backbone and is moving into the local loop. Following this trend community networks are gradually adopting it. The present technical report accounts for progress made during the first year of optical fiber pilots in the Commons4Europe project.
+
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -484,8 +508,7 @@ This is the abstract
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
- Bottom-up-Broadband (BuB), policy
-%Slotted Aloha, game theory, contention control, media access control.
+ Bottom-up-Broadband (BuB), Community Networks (CNs), Fiber From The Farm (FFTF/FFTx), Optical Fiber (OF), Points-of-Presence (POPs)
 \end{IEEEkeywords}
 
 \clearpage
@@ -516,6 +539,31 @@ This is the abstract
 
 
 \section{Introduction}
+\label{sec:intro}
+\input{sect1/intro}
+
+\section{About this document}
+\label{sec:about}
+\input{sect1_b/about}
+
+\section{Deployments}
+\label{sec:depolyments}
+\input{sect2/deployments}
+
+\section{Points-Of-Presence (POPs)}
+\label{sec:POPs}
+\input{sect3/pops}
+
+\section{Results}
+\label{sec:results}
+\input{sect4/results}
+
+\label{sec:conclusion}
+\label{sec:conclusions}
+\input{sect5/conclusions}
+
+
+
 % The very first letter is a 2 line initial drop letter followed
 % by the rest of the first word in caps.
 % 
@@ -531,16 +579,10 @@ This is the abstract
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{T}{his} is the introduction blah blah blah blah blah blah blah.
-Blah blah blah blah.
-Blah blah blah blah.
-Blah blah blah blah.
-
-\label{sec:conclusion}
-And this is the conclusion.
-
-
-
+%\IEEEPARstart{T}{his} is the introduction blah blah blah blah blah blah blah.
+%Blah blah blah blah.
+%Blah blah blah blah.
+%Blah blah blah blah.
 
 % if have a single appendix:
 %\appendix[Proof of the Zonklar Equations]
