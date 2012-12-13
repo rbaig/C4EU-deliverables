@@ -1,19 +1,17 @@
 A Point-Of-Presence (POP) is an artificial demarcation point or interface point between communicating entities.
 In our case we are referring to optical fiber interconnection points.
 From 2010 until now the guifi.net community has raised six points of presence over the Catalan territory.
-This POPs are following the network model of freedom and neutrality specified in the XOLN\ref{XOLN} licence.
+This POPs are following the network model of freedom and neutrality specified in the community network license\footnote{This is the agreement all users must accept to join the network. It's mission is to keep the network free, open and neutral. The Catalan version can be found at \url{http://guifi.net/ca/CXOLN}. It has not yet been translated into English}.
 Thus anyone is able to connect to them but always respecting the same conditions.
 From a general perspective guifi.net community is building a set of neutral exchange points, leaving the
 infrastructure available to the individuals, associations or either companies.
-\medskip
-Figure \ref{fig:fibre_map} shows the fiber network map of guifi.net POPs (not all of them).
 
-\bigskip
+Figure \ref{fig:fibre_map} shows the fiber network map of guifi.net POPs (not all of them).
 
 The current guifi.net POPs are managed, maintained and also economically sustained for the community. 
 To interconnect all of them it is need to use third party infrastructure. The FFTH projects are able to deploy some kilometres
 of optical fiber but not hundreds or even thousands.
-\newline
+
 In Catalonia there exist a set of deployed fibers which are owned by the Catalan government, available to any entity and 
 rented for a regularized price. Most of the guifi.net POPs are connected to such network to interchange data
 between them. Figure \ref{fig:xoc_map} shows a slice of the network fiber map provided by the government. 
@@ -41,9 +39,10 @@ between them. Figure \ref{fig:xoc_map} shows a slice of the network fiber map pr
 
 Gurb is a small village in a rural area of the geographical center of Catalonia. Back in 2004 the first guifi.net community
 was born here. Probably because of that Gurb is nowadays one of the places where the bottom-up broadband model has more
-influence. As seen in section \ref{SECCIO} the community users deployed some optical fiber kilometres to reach the government
+influence. As seen in Section \ref{deployments} the community users deployed some optical fiber kilometres to reach the government
 infrastructure and connect with other POPs.
-\medskip
+
+
 It is a very important point-of-presence because it allows a small data center provided and maintained by the community.
 There are even ISP companies connected to such POP following and using the open-network model to provide Internet
 connectivity to end users.
@@ -59,7 +58,7 @@ connectivity to end users.
 
 \subsubsection{Vic}
 
-VIC HISTORY ABOUT KIDS AND FORCED WORKD
+
 
 \begin{figure}[htbp]
   \centering
@@ -79,41 +78,41 @@ Other points-of-present not directly related with this project are:
 
 	\item Tortosa: It is a city placed on the sud of Catalonia. The guifi.net users started a goverment's funded project named 
 		OpenFPnet\footnote{\url{http://openfpnet.guifi.net}} which tries to create an open and neutral fiber backbone 
-		arround the zone and the surrounding villages. Starting from that point they opened a POP to connect with the 
-		rest of guifi.net infraestructure. Currently this point-of-presence is economically maintained by some community 
+		around the zone and the surrounding villages. Starting from that point they opened a POP to connect with the 
+		rest of guifi.net infrastructure. Currently this point-of-presence is economically maintained by some community 
 		users grouped in associations and some company with interests of use such fiber.
 
 	\item Barcelona: The Catalonia's capital POP is the one placed in the Internet exchange point CATNIX.
 \end{itemize}
 
-\subsubsection{CATNIX}
+\subsubsection{Telvent-Barcelona}
 
-\bigskip 
+Telvent-Barcelona is a commercial data center of Telvent\footnote{\url{http://www.telvent.es/en/}} placed in an industrial park of Barcelona. It hosts CATNIX\footnote{\url{http://www.catnix.net}}, the Internet exchange point (IX) of Catalonia, a physical infrastructure provided by the Catalan government. IXs are critical for the Internet since they are meant to let the network operators exchange their information and connect their networks (autonomous systems). 
 
-CATNIX\footnote{\url{http://www.catnix.net}} is the name of the internet exchange point (IX) of Catalonia. 
-It is a physical infrastructure provided by the goberment to leave the network operators exchange their 
-information and connect their networks (autonomous systems). 
+On the one hand, as be shown in Figure \ref{fig:fibre_map}, all guifi.net POPs are linked to TELVENT-Barcelona. On the other hand, guifi.net connects to the Internet through this POP.
 
-\medskip
-All guifi.net POPs terminate to such infrastructure (as can be shown in figure \ref{fig:fibre_map}) where
-all of them connect together to became part of the main community network. 
-
-\medskip
-Guifi.net Foundation operates it's own backbone infrastructure using the ASN 49835 (Autonomous System Number). 
+guifi.net Foundation operates it's own backbone infrastructure using the ASN 49835 (Autonomous System Number). 
 An open peering policy is followed to establish peering sessions with all potential partners.
-The Foundation is part of the CATNIX, so it is also possible to exchange data with other ISP and
-rent Internet uplink directly to an international carrier. Right now there is one symetric Internet gigabit 
-available. 
-\newline
-This is probably the most important POP of the current guifi.net network infraestructure.
+Figure~\ref{catnix_net_load} shows the . Additionally guifi.net Foundation has an Internet Gigabit uplink contracted with Cogent\footnote{\url{http://www.cogentco.com/en/}}. All guifi.net Foundation routers and servers are allocated in a 22U rack in TELVENT-Barcelona, shown in Figure~\ref{telvent_rack}. 
 
+The Telvent-Barcelona Foundation resources are shared with other partners, such as puntCat\footnote{\url{http://www.domini.cat/}}, the Catalan Top-Level Domain (TDL).
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=.65]{sect3/figures/catnix_network_load_year.eps} 
   \caption{CATNIX's POP network load (year)}
-  \label{fig:vic_net_load}
+  \label{fig:catnix_net_load}
 \end{figure}
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=.65]{sect3/figures/telvent_rack_front_view.eps} 
+  \caption{guifi.net Foundation rack in TELVENT-Barcelona.}
+  \label{fig:telvent_rack}
+\end{figure}
+
+
 
 
 \subsubsection{Tortosa}
