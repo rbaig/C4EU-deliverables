@@ -1,22 +1,11 @@
-A Point-Of-Presence (POP) is an artificial demarcation point or interface point between communicating entities.
-In our case we are referring to optical fiber interconnection points.
-From 2010 until now the guifi.net community has raised six points of presence over the Catalan territory.
-This POPs are following the network model of freedom and neutrality specified in the community network license\footnote{This is the agreement all users must accept to join the network. It's mission is to keep the network free, open and neutral. The Catalan version can be found at \url{http://guifi.net/ca/CXOLN}. It has not yet been translated into English}.
-Thus anyone is able to connect to them but always respecting the same conditions.
+A Point-Of-Presence (POP) is an artificial demarcation point or interface point between communicating entities. Al POPs mentioned in this documents refers to optical fiber (OF) interconnection points.
 
-From a general perspective guifi.net community is building a set of neutral exchange points, leaving the
-infrastructure available to the individuals, associations or either companies. These kind of POPs are named POP-IX making
-reference to the internet exchange points (IX).
+Since 2010 the guifi.net community has raised six POPs over the Catalan territory, all of them according to the Bottom-up Broadband (BuB) model specified in the guifi.net network license\footnote{This is the agreement all users must accept to join the network. It's mission is to keep the network free, open and neutral. The Catalan version can be found at \url{http://guifi.net/ca/CXOLN}. It has not yet been translated into English}.
+Thus anyone is able to connect to them as long as he/she accepts this license.
 
-Figure \ref{fig:fibre_map} shows the fiber network map of guifi.net POPs (not all of them).
+From a general perspective guifi.net community is building a set of neutral exchange points, leaving the infrastructure available to the individuals, associations or either companies. These kind of POPs are named POP-IX referring to the Internet eXchange points (IX).
 
-The current guifi.net POPs are managed, maintained and also economically sustained for the community. 
-To interconnect all of them it is need to use third party infrastructure. The FFTH projects are able to deploy some kilometres
-of optical fiber but not hundreds or even thousands.
-
-In Catalonia there exist a set of deployed fibers which are owned by the Catalan government, available to any entity and 
-rented for a regularized price. Most of the guifi.net POPs are connected to such network to interchange data
-between them. Figure \ref{fig:xoc_map} shows a slice of the network fiber map provided by the government. 
+Figure \ref{fig:fibre_map} shows the OF network map of guifi.net POPs as of December 2012. The backbone, i.e. the POPs interconnections are made using third party infrastructures. Currently all the POP interconnection links are over the Xarxa Oberta de Catalunya (\url{http://www.xarxaoberta.cat/en/about-xoc}). %Figure \ref{fig:xoc_map} shows a slice of the network fiber map provided by the government. 
 
 \begin{figure}[htbp]
   \centering
@@ -25,12 +14,12 @@ between them. Figure \ref{fig:xoc_map} shows a slice of the network fiber map pr
   \label{fig:fibre_map}
 \end{figure}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[scale=.5]{sect3/figures/xoc_map.eps} 
-  \caption{Available regularized fiber}
-  \label{fig:xoc_map}
-\end{figure}
+%\begin{figure}[htbp]
+%  \centering
+%  \includegraphics[scale=.5]{sect3/figures/xoc_map.eps} 
+%  \caption{Available regularized fiber}
+%  \label{fig:xoc_map}
+%\end{figure}
 
 
 \FloatBarrier
@@ -38,15 +27,9 @@ between them. Figure \ref{fig:xoc_map} shows a slice of the network fiber map pr
 
 \FloatBarrier
 \subsubsection{Gurb}
-Gurb is a small village in a rural area of the geographical center of Catalonia. Back in 2004 the first guifi.net community
-was born here. Probably because of that Gurb is nowadays one of the places where the bottom-up broadband model has more
-influence. As explained in Section~\ref{sec:deployments} the community users deployed some optical fiber kilometres to reach the government
-infrastructure and connect with other POPs.
+Gurb pilot has its own POP fully operational. The POP is placed in the garage of a home's guifi.net member. The garage also hosts a data center where the guifi.net partners\footnote{A guifi.net partner is a guifi.net member that has professional interest in the network.} can collocate their hardware.
 
-
-It is a very important point-of-presence because it allows a small data center provided and maintained by the community.
-There are even ISP companies connected to such POP following and using the open-network model to provide Internet
-connectivity to end users.
+This POP, activated in 2010, was the first to be activated. Figure~\ref{fig:gurb_net_load} shows its traffic load in 2012.
 
 
 \begin{figure}[htbp]
@@ -61,33 +44,12 @@ connectivity to end users.
 \FloatBarrier
 \subsubsection{Vic}
 
-
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[scale=.65]{sect3/figures/vic_network_load_year.eps} 
-  \caption{Vic's POP network load (year 2012).}
-  \label{fig:vic_net_load}
-\end{figure}
-
+The Vic's POP is expected to be fully activated in the coming days.
 
 
 \FloatBarrier
 \subsection{Other POPs}
 
-Other points-of-present not directly related with this project are:
-
-\begin{itemize}
-	\item Masquefa: blablabla IGLU?
-
-	\item Tortosa: It is a city placed on the sud of Catalonia. The guifi.net users started a goverment's funded project named 
-		OpenFPnet\footnote{\url{http://openfpnet.guifi.net}} which tries to create an open and neutral fiber backbone 
-		around the zone and the surrounding villages. Starting from that point they opened a POP to connect with the 
-		rest of guifi.net infrastructure. Currently this point-of-presence is economically maintained by some community 
-		users grouped in associations and some company with interests of use such fiber.
-
-	\item Barcelona: The Catalonia's capital POP is the one placed in the Internet exchange point CATNIX.
-\end{itemize}
 
 \FloatBarrier
 \subsubsection{Telvent-Barcelona}
@@ -97,7 +59,7 @@ Telvent-Barcelona is a commercial data center of Telvent\footnote{\url{http://ww
 On the one hand, as be shown in Figure \ref{fig:fibre_map}, all guifi.net POPs are linked to TELVENT-Barcelona. On the other hand, guifi.net connects to the Internet through this POP.
 
 guifi.net Foundation operates it's own backbone infrastructure using the ASN 49835 (Autonomous System Number). 
-An open peering policy is followed to establish peering sessions with all potential partners. Figure~\ref{fig:catnix_net_load} shows the total peering traffic. Additionally guifi.net Foundation has an Internet Gigabit uplink contracted with Cogent\footnote{\url{http://www.cogentco.com/en/}}. Figure~\ref{fig:cogent_load} . All guifi.net Foundation routers and servers are allocated in a 22U rack in Telvent-Barcelona, shown in Figure~\ref{fig:telvent_rack}. 
+An open peering policy is followed to establish peering sessions with all potential partners. Figure~\ref{fig:catnix_net_load} shows the total peering traffic of guifi.net CATNIX port\footnote{To be a CATNIX members must have at least one public ASN and one public IP block. Guifi.net is a Local Internet Registry (LIR) since it is a RIPE-NCC member, and has its own ASN numbers and IPv4 and IPv6 blocks.}. Additionally guifi.net Foundation has an Internet Gigabit uplink contracted with Cogent\footnote{\url{http://www.cogentco.com/en/}}. Figure~\ref{fig:cogent_load} . All guifi.net Foundation routers and servers are allocated in a 22U rack in Telvent-Barcelona, shown in Figure~\ref{fig:telvent_rack}. 
 
 
 Figure \ref{fig:telvent_scheme} shows a connection scheme (layer 2) of the hardware used for the CATNIX POP. 
@@ -140,18 +102,21 @@ The Telvent-Barcelona Foundation resources are shared with other partners, such 
 \end{figure}
 
 
-
-\FloatBarrier
-\subsubsection{Tortosa}
-Tortosa is a city placed on the south of Catalonia. The guifi.net users started a project named 
-OpenFPnet\footnote{\url{http://openfpnet.guifi.net}} with the objective of create an open and neutral fiber backbone 
-around the surrounding villages. This project was initially partially-funded by the government. 
-\newline
-Starting from that point they opened a POP to connect with the rest of guifi.net infrastructure. 
-Currently it is economically sustained by community users grouped in associations and some company with interests in use
-this open and neutral point.
-
-
 \FloatBarrier
 \subsubsection{Masquefa}
 
+Masquefa\footnote{Masquefa, population 8.310 hab, density 487,1 hab/km$^{2}$, located in the ''comarca'' of Anoia, Catalonia.} is a town of a rural area with a pretty high population density. Due to the poor quality of the Internet access of the traditional telcos the local government undertook a project to bring the broadband to the homes. The project was carried out and is maintained by a local SME. It combines WiFi and OF technologies and integrates a POP which was activated in 2012.
+
+\FloatBarrier
+\subsubsection{Igualda}
+
+Igualda{Igualada, population 39.191 hab, density 4.826,48 hab/km$^{2}$, the capital of the ''comarca'' of Anoia, Catalonia.} is a city similar to Vic. It was one of the pioneers adopting guifi.net outside Osona. The same SME which is operating the Masquefa infrastructure managed to rise a POP in this city also in 2012.
+
+
+\FloatBarrier
+\subsubsection{Tortosa}
+Tortosa {Tortosa, population 34.432 hab, density 157,62 hab/km$^{2}$, the capital of the ''comarca'' of Anoia, Catalonia.} is a city placed on the south of Catalonia. It has a urban center similar to Vic and Igualda but additionaly has a pretty big rural area. The guifi.net users started a project named  OpenFPnet\footnote{\url{http://openfpnet.guifi.net}} with the objective of create an open and neutral fiber backbone around the surrounding villages and set up a POP, which was rised in 2012. From October 2011 to September 2012 the project was partially-funded by the Spanish government through a secondary school\footnote{Institut Montsià, \url{http://www.iesmontsia.org/}}. Currently it is economically sustained by community users grouped in associations and some local SMEs.
+
+
+%\FloatBarrier
+%\subsubsection{Tortosa}
