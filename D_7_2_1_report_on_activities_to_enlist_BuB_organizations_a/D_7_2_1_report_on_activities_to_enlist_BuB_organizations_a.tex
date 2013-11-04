@@ -88,7 +88,7 @@
 % compilation based on whether the output is pdf or dvi.
 % usage:
  \ifpdf
-   % pdf code
+%   % pdf code
    \usepackage{graphicx}
    \usepackage{epstopdf}
 
@@ -404,7 +404,7 @@
 \fi
 }
 \fancyhead[R]{ % right
-D5.4.2 Report on Pilots on Fiber Deployment -- b
+D7.2.1 Report on Activities to Enlist BuB Organizations -- a
 }
 \pagestyle{fancy}
 \cfoot{Page \thepage\ of \pageref{LastPage}}
@@ -516,22 +516,28 @@ D5.4.2 Report on Pilots on Fiber Deployment -- b
 
 \begin{abstract}
 %\boldmath
-  Optical Fiber is certainly the best technology available for data transmission in terms bandwidth, latency, reliability and stability. As installation costs decrease, it is expanding beyond its original realm and major application in the carrier backbone and is moving into the local loop. Following this trend community networks are gradually adopting it. Thus this technology is one of the three selected in Commons for Europe project for Bottom-Up Broadband pilots. The present technical report accounts for progress made during the second reporting period (Nov 2012 - Oct 2013) of optical fiber pilots in the Commons for Europe project.
+Community networking, together with the Bottom-up-Broadband initiative, is an emerging model for the Future Internet across Europe and beyond where communities of citizens build, operate and own open IP-based networks, a key infrastructure for individual and collective digital participation. Although community based networks often extend or complement the coverage of networks of commercial ISPs, they differ in several key aspects: There is usually no central authority that is responsible for a precise network planning. Support is decentralized and open, provided by the community. The network nodes are often inexpensive off the shelf equipment and the network elements exhibit a high degree of heterogeneity in the hardware, software, and capacity. The network infrastructure belongs to the user and is shared to build the network. The network is very dynamic: the number of nodes may rapidly grow and change as new members join the network, or when nodes overload or fail. These community networks are usually built with low cost point-to-point wireless links, MANET networks, and an increasing presence of optical fibre links.
 
-  \vspace*{\fill}
-\end{abstract}
+Work Package 7, \emph{Bottom-up-Broadband for Europe}, of Commons4Europe project aims to support the creation of a pan European organization that could provide structure and support to the existing Bottom-up-Broadband initiatives in Europe from either public organizations or emergent from citizen activism. The present document is the first report on the achievements of task T7.2, \emph{Enlisting BuB organizations}, task aim at creating awareness and enlisting the existing BuB organizations to the project. Its success will materialize with the constitution of a second layer organisation aimed at gathering BuB organisations.
 
 \vspace*{\fill}
+\end{abstract}
 
-\renewcommand{\abstractname}{Background / Suggested Reading}
+%\renewcommand{\abstractname}{Deliverables D7.2.1 and D7.3.1 merged}
+%\begin{abstract}
+%%\boldmath
+%Due to the fact that tasks T7.2, \emph{Enlisting BuB organizations}, and T7.3, \emph{Building Support for BuB4Europe} are strongly related to each other and that they involve relative small amount of man power (2 and 4 respectively for the first WP year and 2 and 5 for the second -the last), the lead beneficiary of them (guifi.net) has decided to merge their reports, D7.2.1, \emph{Report on activities to enlist BuB organizations - a} and D7.3.1, \emph{Report on Building Support for BuB4Europe - b }, into single present document. This decision has been approved by the project leader (ESADE) and is totally aligned with the recommendation of optimising the paperwork efforts made during the first review process.
+%
+%\vspace*{\fill}
+%\end{abstract}
+\renewcommand{\abstractname}{Relationship with D7.3.1}
 \begin{abstract}
 %\boldmath
-  The socio-economics fundamentals of the optical fiber pilots as long as the technological aspects are explained in the report of the first reporting period (Nov 2011 - Oct 2012). The present document reports only on the progress made during the second year of these pilots following the same structure of the first report. Thus, it is strongly recommended to be familiar with the first year report before reading this one.
+In some situations the strong relationship between T7.2, \emph{Enlisting BuB organizations}, and T7.3, \emph{Building Support for BuB4Europe}, makes difficult to clearly assign an action to one task or to the other. The same happens with their deliverables, D7.2.1, \emph{Report on activities to enlist BuB organizations - a} and D7.3.1, \emph{Report on Building Support for BuB4Europe - b }. As a consequence, it is recommended to read both deliverables to have a complete view of the job done.
 
-  The "Fiber From The Farm (FFTF) \emph{D5.4.1: Report on Pilots on Fiber Deployment -a}" report, the first reporting period report of fiber pilots, can be found at \url{https://github.com/jbarcelo/C4EU-deliverables/blob/master/D_5_4_1_report_on_pilots_on_fiber_deployment_a/DELIVERED_VERSION/D5.4.1%20Report%20on%20pilots%20on%20fiber%20deployment%20-%20a%20guifi.net_DELIVERED_VERSION.pdf}
-
-  \vspace*{\fill}
+\vspace*{\fill}
 \end{abstract}
+
 
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -543,9 +549,9 @@ D5.4.2 Report on Pilots on Fiber Deployment -- b
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-  Bottom-up Broadband (BuB), Community Networks (CNs), Fiber From The Farm (FFTF/FFTx), Optical Fiber (OF), Points-of-Presence (POPs)
+ Bottom-up-Broadband (BuB), Community Networks (CNs), International organisation, Organisation of organisations
 
-  \vspace*{\fill}
+ \vspace*{\fill}
 
 \end{IEEEkeywords}
 
@@ -557,7 +563,7 @@ D5.4.2 Report on Pilots on Fiber Deployment -- b
 
 \listoffigures
 
-\listoftables
+%\listoftables
 
 \clearpage
 
@@ -576,30 +582,26 @@ D5.4.2 Report on Pilots on Fiber Deployment -- b
 
 
 
-%\section{Introduction}
-%\label{sec:intro}
-%\input{sect1/intro}
-%
-%\section{About this document}
-%\label{sec:about}
-%\input{sect1_b/about}
-%
-%\section{Related work}
-%\label{sec:related}
-%\input{sect1_c/related}
-%
-\section{Deployments}
-\label{sec:deployments}
-\input{sect2/deployments}
+\section{Introduction}
+\label{sec:intro}
+\input{sect1/intro}
 
-\section{Points-Of-Presence (POPs)}
-\label{sec:POPs}
-\input{sect3/pops}
+\section{About this document}
+\label{sec:about}
+\input{sect1_b/about}
 
-\section{Evaluation of Pilot's Results}
-\label{sec:results}
-\input{sect4/results}
+\section{Work done}
+\label{sec:dissemination}
+\input{sect2/done}
 
+\section{Plans for the next year}
+\label{sec:L2org}
+\input{sect3/future}
+
+%\section{Results}
+%\label{sec:results}
+%\input{sect4/results}
+%
 \section{conclusion}
 \label{sec:conclusions}
 \input{sect5/conclusions}
