@@ -1,141 +1,102 @@
-A Point-Of-Presence (POP) is an artificial demarcation point or interface point between communicating entities. Al POPs mentioned in this documents refers to optical fiber (OF) interconnection points.
+During this second year another four territorial PoPs have be raised and made operative, amounting to a total of eight territorial and the concentration one (Telvent -Barcelona) operational. Figure~\ref{fig:pop_weathermap} shows their distribution on the map. So far all the territorial PoPs are connected to the concentration one via XOC connections\footnote{The prices can be found at \url{http://www.xarxaoberta.cat/en/prices}.}.
 
-Since 2010 the guifi.net community has raised five POPs over the Catalan territory, all of them according to the Bottom-up Broadband (BuB) model specified in the guifi.net network license\footnote{This is the agreement all users must accept to join the network. It's mission is to keep the network free, open and neutral. The Catalan version can be found at \url{http://guifi.net/ca/CXOLN}. It has not yet been translated into English}.
-Thus anyone is able to connect to them as long as he/she accepts this license.
-
-From a general perspective guifi.net community is building a set of neutral exchange points, leaving the infrastructure available to the individuals, associations or either companies. These kind of POPs are named POP-IX referring to the Internet eXchange points (IX).
-
-Figure \ref{fig:fibre_map} shows the OF network map of guifi.net POPs as of December 2012. The backbone, i.e. the POPs interconnections are made using third party infrastructures. Currently all the POP interconnection links are over the Xarxa Oberta de Catalunya (XOC)\footnote{\url{http://www.xarxaoberta.cat/en/about-xoc}}.
-
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics[scale=.35]{sect3/figures/pops_network_map.eps} 
-  \caption{Guifi.net fiber POPs network map}
-  \label{fig:fibre_map}
+  \includegraphics[width=0.95\linewidth]{sect3/figures/weathermap.png} 
+  \caption[Guifi.net fiber POPs network map 2013]{Guifi.net fiber POPs network map 2013.}
+  \label{fig:pop_weathermap}
 \end{figure}
 
+With regard the IXs operation, during this year the IX monitoring and management system has been improved\footnote{The new monitoring system was launched in June 2013. This explains why most of the traffic graphs of this only have data from then.} and a new accounting system meant to make more theshowback/chargeback of the ISPs efficient has started being developed (it is expected to be fully operational by 2014). New equipment has been acquired and put into operation in almost all PoPs. For example, Figure~\ref{fig:telvent_diagram} shows the current state, at wiring level, of Telvent's PoP.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\linewidth]{sect3/figures/telvent_diagram.eps} 
+  \caption[Telvent network diagram]{Telvent network diagram Oct. 2013.}
+  \label{fig:telvent_diagram}
+\end{figure}
+
+
+During this period the CATNIX (the Catalan exchange point) peering process has been completed. As a result, the guifi.net Foundation is peering with all the other CATNIX members with the exception of the big ISPs (the Telefonica -the incumbent well known for its bad practices, Ono and BT). These ISPs have not shown any interest in peering with us.
+
+Figure~\ref{fig:catnix_transit} shows the evolution of the peering traffic and Figure~\ref{fig:cogent_transit} shows the traffic to Cogent (our internet carrier). A second carrier is expected to be hired in the coming weeks, essentially to have a redundant internet access but also to anticipate the bandwidth demand.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\linewidth]{sect3/figures/catnix.png} 
+  \caption[CATNIX traffic 2013]{CATNIX traffic 2013.}
+  \label{fig:catnix_transit}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\linewidth]{sect3/figures/cogent.png} 
+  \caption[Cogent traffic 2013]{Cogent traffic 2013.}
+  \label{fig:cogent_transit}
+\end{figure}
 
 \FloatBarrier
 \subsection{Pilot's POPs}
+\label{pop_pilots}
+
 
 \FloatBarrier
 \subsubsection{Gurb}
-Gurb pilot has its own POP fully operational. The POP is placed in the garage of a home's guifi.net member. The garage also hosts a data center where the guifi.net partners\footnote{A guifi.net partner is a guifi.net member that has professional interest in the network.} can collocate their hardware. Pictures on Figure~\ref{fig:gurb_net_load} shows some details of the current installation.
+\label{pop_gurb}
 
+This PoP has been operative since 2010. This year the power supply system has been improved by adding a back-up power supply. Also the electronic equipment has been significantly extended to accommodate the necessities deriving from Gurb's OF pilot deployment and other connections. Firgure~\ref{fig:gurb_transit} shows the transit of this PoP.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-    \begin{tabular}{cc}
-      \resizebox{70mm}{!}{\includegraphics{sect3/figures/gurb_rack1.eps}} &
-      \resizebox{70mm}{!}{\includegraphics{sect3/figures/gurb_rack2.eps}} \\
-    \end{tabular}
-  \caption{Gurb's POP detailed pictures. On the right the OF terminations. On the left the routers.}
-  \label{fig:grub_rack}
-\end{figure}
-
-This POP, activated in 2010, was the first one. Figure~\ref{fig:gurb_net_load} shows its traffic load in 2012.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[scale=.65]{sect3/figures/gurb_network_load_year.eps} 
-  \caption{Gurb's POP network load (year 2012).}
-  \label{fig:gurb_net_load}
+  \includegraphics[width=0.95\linewidth]{sect3/figures/gurb.png} 
+  \caption[Gurb PoP traffic 2013]{Gurb PoP traffic 2013.}
+  \label{fig:gurb_transit}
 \end{figure}
 
 
 \FloatBarrier
 \subsubsection{Vic}
+\label{pop_vic}
 
-The Vic's POP is expected to be fully activated in the coming days.
+As already foreseen in the previous report, this PoP was activated few days after that report realise. Despite the fact that Vic borders Gurb, hhis PoP was raised as an alternative to the impossibility of reaching the Gurb's PoP. The equipment is allocated in a data centre of a facilitate of the local government (http://www.vitvic.cat/). Firgure~\ref{fig:vic_transit} shows the transit of this PoP.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\linewidth]{sect3/figures/vic.png} 
+  \caption[Vic PoP traffic 2013]{Vic PoP traffic 2013.}
+  \label{fig:vic_transit}
+\end{figure}
+
+
+\FloatBarrier
+\subsubsection{Rub\'{i}}
+\label{pop_rubi}
+
+In contrast to Vic, where due to its proximity to Gurb the option of not raising a PoP was worked, Rubí pilot clearly needs its own PoP. Thus, if the pilot is eventually developed in 2014 this PoP must be raised.
 
 
 \FloatBarrier
 \subsection{Other POPs}
+\label{pop_others}
+
+Firgure~\ref{fig:others_transit} shows the transit of the rest of the operational territorial PoPs .
 
 
-\FloatBarrier
-\subsubsection{Telvent-Barcelona}
-
-Telvent-Barcelona is a commercial data center\footnote{\url{http://www.telvent.es/en/}} placed in an industrial park of Barcelona. It hosts the CATNIX\footnote{\url{http://www.catnix.net}}, the Internet exchange point (IX) of Catalonia, a physical infrastructure provided by the Catalan government. IXs are critical for the Internet since they are meant to let the network operators exchange their information and connect their networks (autonomous systems). 
-
-On the one hand, as be shown in Figure \ref{fig:fibre_map}, all guifi.net POPs are linked to TELVENT-Barcelona. On the other hand, guifi.net connects to the Internet through this POP.
-
-guifi.net Foundation operates it's own backbone infrastructure using the ASN 49835 (Autonomous System Number). 
-An open peering policy is followed to establish peering sessions with all potential partners. Figure~\ref{fig:catnix_net_load} shows the total peering traffic of guifi.net CATNIX port\footnote{To be a CATNIX members must have at least one public ASN and one public IP block. Guifi.net is a Local Internet Registry (LIR) since it is a RIPE-NCC member, and has its own ASN numbers and IPv4 and IPv6 blocks.}. Additionally guifi.net Foundation has an Internet Gigabit uplink contracted with Cogent\footnote{\url{http://www.cogentco.com/en/}}. Figure~\ref{fig:cogent_load} . All guifi.net Foundation routers and servers are allocated in a 22U rack in Telvent-Barcelona, shown in Figure~\ref{fig:telvent_rack}. 
-
-
-Figure \ref{fig:telvent_scheme} shows a connection scheme (layer 2) of the hardware used for the CATNIX POP. 
-The first port of the switch SW-03 is the optical fiber which brings the data from the other POPs. As can be seen each
-of them use a separate VLAN. The seventh port of the second switch is the connection with the carrier to reach the Internet.
-And the eight is connected to the CATNIX infrastructure where the exchange of data with other ISPs and networks is possible. 
-
-
-The Telvent-Barcelona Foundation resources are shared with other partners, such as puntCat\footnote{\url{http://www.domini.cat/}}, the Catalan Top-Level Domain (TDL), which is currently using half of the space available.
-
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics[scale=.65]{sect3/figures/catnix_network_load_year.eps} 
-  \caption{Telvent-Barcelona's POP network load (year 2012).}
-  \label{fig:catnix_net_load}
+    \begin{tabular}{c}
+      \resizebox{0.75\linewidth}{!}{\includegraphics{sect3/figures/masquefa.png}} \\
+      \resizebox{0.75\linewidth}{!}{\includegraphics{sect3/figures/igualada.png}} \\
+      \resizebox{0.75\linewidth}{!}{\includegraphics{sect3/figures/manresa.png}} \\
+      \resizebox{0.75\linewidth}{!}{\includegraphics{sect3/figures/aldea.png}} \\
+      \resizebox{0.75\linewidth}{!}{\includegraphics{sect3/figures/tortosa.png}} \\
+    \end{tabular}
+  \caption[Other PoPs traffic 2013]{Other PoPs traffic 2013. Top: Masquefa. Second top: Igualda. Middle: Manresa. Second bottom: Aldea. Bottom: Tortosa.}
+  \label{fig:others_transit}
 \end{figure}
 
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[scale=.65]{sect3/figures/cogent_network_load2.eps} 
-  \caption{Internet uplink load (year 2012).}
-  \label{fig:cogent_load}
-\end{figure}
-
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[scale=.65]{sect3/figures/telvent_rack_front_view.eps} 
-  \caption{guifi.net Foundation rack in TELVENT-Barcelona.}
-  \label{fig:telvent_rack}
-\end{figure}
-
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[scale=.75]{sect3/figures/telvent_scheme.eps} 
-  \caption{CATNIX connections scheme}
-  \label{fig:telvent_scheme}
-\end{figure}
-
-
-
-\FloatBarrier
-\subsubsection{Masquefa}
-
-Masquefa is a town of a rural area with a pretty high population density. Due to the poor quality of the Internet access of the traditional telcos the local government undertook a project to bring the broadband to the homes. The project was carried out and is maintained by a local SME. It combines WiFi and OF technologies and integrates a POP which was activated in 2012.
-
-\FloatBarrier
-\subsubsection{Igualda}
-
-Igualda is a city similar to Vic. It was one of the pioneers adopting guifi.net outside Osona. The same SME which is operating the Masquefa infrastructure managed to rise a POP in this city also in 2012.
-
-
-\FloatBarrier
-\subsubsection{Tortosa}
-Tortosa \footnote{Tortosa, population 34.432 hab, density 157,62 hab/km$^{2}$, the capital of the ''comarca'' of Anoia, Catalonia.} is a city placed on the south of Catalonia. It has a urban center similar to Vic and Igualda but additionaly has a pretty big rural area. The guifi.net users started a project named  OpenFPnet\footnote{\url{http://openfpnet.guifi.net}} with the objective of create an open and neutral fiber backbone around the surrounding villages and set up a POP, which was rised in 2012. From October 2011 to September 2012 the project was partially-funded by the Spanish government through a secondary school\footnote{Institut Montsià, \url{http://www.iesmontsia.org/}}. Currently it is economically sustained by community users grouped in associations and some local SMEs.
-
-
-
-\FloatBarrier
-\subsubsection{Expected POPs in 2013}
-
-In 2013 other POPs are expected to be risen. The POPs that have a very high probability to happen are:
-
-\begin{itemize}
-  \item Balany\`{a}
-  \item Centelles
-\end{itemize} 
-
-The POPs that can be consolidated during the 2013 are:
-
-\begin{itemize}
-  \item Aldea
-  \item Matar\'{o}
-  \item Cerdanyola
-\end{itemize} 
+%\item Masquefa
+%\item Igualda
+%\item Manresa
+%\item Aldea
+%\item Tortosa

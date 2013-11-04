@@ -66,7 +66,7 @@
 \documentclass[draftclsnofoot,12pt,journal,onecolumn]{IEEEtran}
 \renewcommand{\rmdefault}{phv} % Arial
 \renewcommand{\sfdefault}{phv} % Arial
-\setcounter{page}{3}
+\setcounter{page}{1}
 
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
@@ -87,18 +87,28 @@
 % Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
 % compilation based on whether the output is pdf or dvi.
 % usage:
-% \ifpdf
-%   % pdf code
+ \ifpdf
+   % pdf code
+   \usepackage{graphicx}
+   \usepackage{epstopdf}
+
+   \epstopdfsetup{suffix=}
+
+   \DeclareGraphicsRule{.eps}{pdf}{.pdf}{`epstopdf #1}
+   \pdfcompresslevel=9
 % \else
 %   % dvi code
-% \fi
+ \fi
 % The latest version of ifpdf.sty can be obtained from:
 % http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
 % Also, note that IEEEtran.cls V1.7 and later provides a builtin
 % \ifCLASSINFOpdf conditional that works the same way.
 % When switching from latex to pdflatex and vice-versa, the compiler may
 % have to be run twice to clear warning/error messages.
-
+%%% eps to pdf
+%%% specify .eps extension when \includegraphics if you want the .pdf fig file to be regenerated as part of the compilation. Without extension the .pdf fig file is generated only if it does not exist yet
+%%% --shell-escape option must be enabled
+%%% in Texmaker Options/Configure Texmaker/PdfLaTex -> pdflatex --shell-escape -synctex=1 -interaction=nonstopmode %.tex
 
 
 
@@ -394,7 +404,7 @@
 \fi
 }
 \fancyhead[R]{ % right
-C4EU 5.4.2: Report on Pilots on Fiber Deployment -b
+D5.4.2 Report on Pilots on Fiber Deployment -b
 }
 \pagestyle{fancy}
 \cfoot{Page \thepage\ of \pageref{LastPage}}
@@ -412,11 +422,14 @@ C4EU 5.4.2: Report on Pilots on Fiber Deployment -b
 \hyphenation{op-tical net-works semi-conduc-tor}
 
 
+% roger
+\usepackage{float} %% enables the [H] option in floats to force their placement in text http://tex.stackexchange.com/questions/8625/force-figure-placement-in-text
+
 \begin{document}
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Fiber From The Farm (FFTF)\\ \emph{(C4EU 5.4.2: Report on Pilots on Fiber Deployment -b)}}
+\title{Fiber From The Farm (FFTF)\\ \emph{(D5.4.2 Report on Pilots on Fiber Deployment -b)}}
 %
 %
 % author names and IEEE memberships
@@ -430,13 +443,16 @@ C4EU 5.4.2: Report on Pilots on Fiber Deployment -b
 
 \author{
   Roger~Baig~Vi\~nas,
-  Jaume~Barcel\'{o}~Vicens,
-  Albert~Boix~Molas,
-  Llu\'{i}s~Dalmau~Junyent,
   Pau~Escrich~Garcia,
+  Francisco~Javier~Jim\'{e}nez~G\'{o}mez,
   Miquel~Martos~Membrives,
+  Llu\'{i}s~Dalmau~Junyent,
   Marc~Mund\'{o}~Comerma,
-  Ramon~Roca~Ti\'{o}
+  Ramon~Roca~Ti\'{o}  
+  Jaume~Barcel\'{o}~Vicens,
+  Miquel Oliver Riera,
+  Albert Domingo 
+
   \thanks{
     Fundaci\'{o} Privada per a la Xarxa Oberta, Lliure i Neutral guifi.net
   }
@@ -466,8 +482,8 @@ C4EU 5.4.2: Report on Pilots on Fiber Deployment -b
 %
 %\markboth{C4EU 2.4.1 Dissemination Report on Telecom Policymakers}%
 %{C4EU 2.4.1 Dissemination Report on Telecom Policymakers}
-%\markboth{C4EU 5.4.2: Report on Pilots on Fiber Deployment -b}%
-%{C4EU 5.4.2: Report on Pilots on Fiber Deployment -b}
+%\markboth{D5.4.2: Report on Pilots on Fiber Deployment -b}%
+%{D5.4.2: Report on Pilots on Fiber Deployment -b}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
@@ -492,15 +508,30 @@ C4EU 5.4.2: Report on Pilots on Fiber Deployment -b
 
 
 % make the title area
-\maketitle
+%\maketitle
+\includepdf[pages=-]{front_cover.pdf}
 \thispagestyle{fancy}
 
 
 \begin{abstract}
 %\boldmath
-Optical Fiber is certainly the best technology available for data transmission in terms bandwidth, latency, reliability and stability. As installation costs decrease, it is expanding beyond its original realm and major application in the carrier backbone and is moving into the local loop. Following this trend community networks are gradually adopting it. The present technical report accounts for progress made during the first year of optical fiber pilots in the Commons4Europe project.
+  Optical Fiber is certainly the best technology available for data transmission in terms bandwidth, latency, reliability and stability. As installation costs decrease, it is expanding beyond its original realm and major application in the carrier backbone and is moving into the local loop. Following this trend community networks are gradually adopting it. Thus this technology is one of the three selected in Commons for Europe project for Bottom-Up Broadband pilots. The present technical report accounts for progress made during the second reporting period (Nov 2012 - Oct 2013) of optical fiber pilots in the Commons for Europe project.
 
+  \vspace*{\fill}
 \end{abstract}
+
+\vspace*{\fill}
+
+\renewcommand{\abstractname}{Background / Suggested Reading}
+\begin{abstract}
+%\boldmath
+  The socio-economics fundamentals of the optical fiber pilots as long as the technological aspects are explained in the report of the first reporting period (Nov 2011 - Oct 2012). The present document reports only on the progress made during the second year of these pilots following the same structure of the first report. Thus, it is strongly recommended to be familiar with the first year report before reading this one.
+
+  The "Fiber From The Farm (FFTF) \emph{D5.4.1: Report on Pilots on Fiber Deployment -a}" report, the first reporting period report of fiber pilots, can be found at \url{https://github.com/jbarcelo/C4EU-deliverables/blob/master/D_5_4_1_report_on_pilots_on_fiber_deployment_a/DELIVERED_VERSION/D5.4.1%20Report%20on%20pilots%20on%20fiber%20deployment%20-%20a%20guifi.net_DELIVERED_VERSION.pdf}
+
+  \vspace*{\fill}
+\end{abstract}
+
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
 % if the journal you are submitting to favors bold math in the abstract,
@@ -508,20 +539,24 @@ Optical Fiber is certainly the best technology available for data transmission i
 % of the abstract to achieve this. Many IEEE journals frown on math
 % in the abstract anyway.
 
+
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
- Bottom-up-Broadband (BuB), Community Networks (CNs), Fiber From The Farm (FFTF/FFTx), Optical Fiber (OF), Points-of-Presence (POPs)
+  Bottom-up Broadband (BuB), Community Networks (CNs), Fiber From The Farm (FFTF/FFTx), Optical Fiber (OF), Points-of-Presence (POPs)
+
+  \vspace*{\fill}
+
 \end{IEEEkeywords}
 
 \clearpage
 
 \tableofcontents
 
-\clearpage
+%\clearpage
 
 \listoffigures
 
-%\listoftables
+\listoftables
 
 \clearpage
 
@@ -540,18 +575,18 @@ Optical Fiber is certainly the best technology available for data transmission i
 
 
 
-\section{Introduction}
-\label{sec:intro}
-\input{sect1/intro}
-
-\section{About this document}
-\label{sec:about}
-\input{sect1_b/about}
-
-\section{Related work}
-\label{sec:related}
-\input{sect1_c/related}
-
+%\section{Introduction}
+%\label{sec:intro}
+%\input{sect1/intro}
+%
+%\section{About this document}
+%\label{sec:about}
+%\input{sect1_b/about}
+%
+%\section{Related work}
+%\label{sec:related}
+%\input{sect1_c/related}
+%
 \section{Deployments}
 \label{sec:deployments}
 \input{sect2/deployments}
@@ -560,7 +595,7 @@ Optical Fiber is certainly the best technology available for data transmission i
 \label{sec:POPs}
 \input{sect3/pops}
 
-\section{Results}
+\section{Evaluation of Pilot's Results}
 \label{sec:results}
 \input{sect4/results}
 
