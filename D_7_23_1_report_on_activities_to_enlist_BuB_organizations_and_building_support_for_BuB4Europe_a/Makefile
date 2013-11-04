@@ -47,7 +47,7 @@ bib:
 	$(LATEX_CMD)
 
 clean:
-	rm -f $(ROOTFILE).aux $(ROOTFILE).log $(ROOTFILE).blg $(ROOTFILE).bbl $(ROOTFILE).out $(ROOTFILE).dvi $(ROOTFILE).ps $(ROOTFILE).lof $(ROOTFILE).lot $(ROOTFILE).toc diff* *~
+	rm -f $(ROOTFILE).aux $(ROOTFILE).log $(ROOTFILE).blg $(ROOTFILE).bbl $(ROOTFILE).out $(ROOTFILE).dvi $(ROOTFILE).ps $(ROOTFILE).lof $(ROOTFILE).lot $(ROOTFILE).toc $(ROOTFILE).synctex.gz diff* *~
 
 cleanall: clean
 	rm -f $(ROOTFILE).pdf

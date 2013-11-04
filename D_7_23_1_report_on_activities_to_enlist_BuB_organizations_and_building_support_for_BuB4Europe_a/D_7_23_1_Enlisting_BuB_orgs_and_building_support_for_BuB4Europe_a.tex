@@ -87,7 +87,7 @@
 % Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
 % compilation based on whether the output is pdf or dvi.
 % usage:
-% \ifpdf
+ \ifpdf
 %   % pdf code
    \usepackage{graphicx}
    \usepackage{epstopdf}
@@ -98,14 +98,17 @@
    \pdfcompresslevel=9
 % \else
 %   % dvi code
-% \fi
+ \fi
 % The latest version of ifpdf.sty can be obtained from:
 % http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
 % Also, note that IEEEtran.cls V1.7 and later provides a builtin
 % \ifCLASSINFOpdf conditional that works the same way.
 % When switching from latex to pdflatex and vice-versa, the compiler may
 % have to be run twice to clear warning/error messages.
-
+%%% eps to pdf
+%%% specify .eps extension when \includegraphics if you want the .pdf fig file to be regenerated as part of the compilation. Without extension the .pdf fig file is generated only if it does not exist yet
+%%% --shell-escape option must be enabled
+%%% in Texmaker Options/Configure Texmaker/PdfLaTex -> pdflatex --shell-escape -synctex=1 -interaction=nonstopmode %.tex
 
 
 
@@ -401,7 +404,6 @@
 \fi
 }
 \fancyhead[R]{ % right
-%D5.4.2 Report on Pilots on Fiber Deployment -b
 D7.2.1 Enlisting BuB orgs. \& D7.3.1 building support for BuB4Europe -a
 }
 \pagestyle{fancy}
@@ -419,6 +421,9 @@ D7.2.1 Enlisting BuB orgs. \& D7.3.1 building support for BuB4Europe -a
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
+
+% roger
+\usepackage{float} %% enables the [H] option in floats to force their placement in text http://tex.stackexchange.com/questions/8625/force-figure-placement-in-text
 
 \begin{document}
 %
@@ -443,10 +448,10 @@ D7.2.1 Enlisting BuB orgs. \& D7.3.1 building support for BuB4Europe -a
   Miquel~Martos~Membrives,
   Llu\'{i}s~Dalmau~Junyent,
   Marc~Mund\'{o}~Comerma,
-  Ramon~Roca~Ti\'{o}  
+  Ramon~Roca~Ti\'{o},
   Jaume~Barcel\'{o}~Vicens,
   Miquel Oliver Riera,
-  Albert Domingo 
+  Albert Domingo Vilar
 
   \thanks{
     Fundaci\'{o} Privada per a la Xarxa Oberta, Lliure i Neutral guifi.net
