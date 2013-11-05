@@ -14,7 +14,7 @@ DVIPS_CMD = $(DVIPS) -o $(ROOTFILE).ps -Ppdf -G0 -t a4 $(ROOTFILE).dvi
 PS2PDF_CMD = ps2pdf -sPAPERSIZE=a4 -dPDFSETTINGS=/prepress -dEmbedAllFonts=true $(ROOTFILE).ps
 
 #all:	clean bib pdf 
-all:	clean pdf
+all:	clean pdf view
 
 pdf: 
 ###	latex $(ROOTFILE).tex
@@ -31,11 +31,17 @@ pdf:
 ##	$(BIBTEX_CMD)
 	$(PDFLATEX_CMD)
 	$(PDFLATEX_CMD)
+
+view:
 	$(PEFVIEWER) $(ROOTFILE).pdf &
 
 
-publish:
-	s3cmd put --acl-public D_5_4_1_report_on_pilots_on_fiber_deployment_a.pdf s3://www.jaumebarcelo.info/projects/C4EU/
+publish: pdf clean
+#	s3cmd put --acl-public D_5_4_1_report_on_pilots_on_fiber_deployment_a.pdf s3://www.jaumebarcelo.info/projects/C4EU/
+	cp $(ROOTFILE).pdf DELIVERED_VERSION/
+	@echo ""
+	@echo "Don't forget to git: pull commit push"
+	@echo ""
 
 
 bib:
